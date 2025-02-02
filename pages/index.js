@@ -2,7 +2,7 @@ import ProjectWrapper from '../components/ProjectWrapper';
 import NavBar from '@/components/NavBar';
 import Head from 'next/head';
 import projects from '/data/projects';
-
+import Footer from '@/components/Footer';
 
 export default function Home() {
 
@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
       </Head>
       <NavBar/>
-      <div className='flex flex-row justify-center items-center scroll-smooth'>
+      <div className='flex flex-row justify-center items-center'>
         <div className='flex flex-col justify-start'>
           <div>
             <div className="flex flex-col justify-start items-start gap-[18px] w-full mb-[237px] mt-[169px]">
@@ -22,6 +22,7 @@ export default function Home() {
               <p className="text-[#939396] text-3xl font-normal font-neuemontreal w-[620px]">Crafting meaningful, intuitive, and engaging human experiences in the digital world.</p>
             </div>
           </div>
+          <div className='mb-20'>
           {projects.projects.map((project, index) => (
             <ProjectWrapper
               key={index}
@@ -32,8 +33,10 @@ export default function Home() {
               src={project.src}
             />
           ))}
+          </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
