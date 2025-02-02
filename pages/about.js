@@ -14,7 +14,7 @@ const About = () => {
       <div className="flex flex-row gap-20 justify-start mx-[120px] mt-[100px] mb-28">
         <img
           className="w-[455px] h-[455px]"
-          src="https://via.placeholder.com/455x455"
+          src="/images/monkey-dancing.gif"
         />
         <div className="flex flex-col gap-9">
           <div className="lol">
