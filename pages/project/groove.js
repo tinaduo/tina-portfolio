@@ -14,22 +14,22 @@ const Groove = () => {
       </Head>
       <NavBar />
       <div>
-        <img className="w-screen h-[538px]" src="/images/monkey-dancing.gif"/>
-        {project.project.map((project, index) => (
-            <HeaderWrapper
-              key={index}
-              name={project.name}
-              description={project.description}
-              tags={project.tags}
-              role={project.role}
-              tools={project.tools}
-              startDate={project.startDate}
-              endDate={project.endDate}
-              year={project.year}
-              minutes={project.minutes}
-            />
-          ))}
-          </div>
+        <img className="w-screen h-[538px]" src="/images/monkey-dancing.gif" />
+        {project.project.slice(0, 1).map((project, index) => (
+          <HeaderWrapper
+            key={index}
+            name={project.name}
+            description={project.description}
+            tags={project.tags}
+            role={project.role}
+            tools={project.tools}
+            startDate={project.startDate}
+            endDate={project.endDate}
+            year={project.year}
+            minutes={project.minutes}
+          />
+        ))}
+      </div>
       <Footer />
     </>
   );
