@@ -9,7 +9,7 @@ const navLinks = [
 
 const NavBar = () => {
     return (
-        <nav className="flex flex-row justify-center py-14 z-10 bg-white">
+        <nav className="flex flex-row justify-center py-14 z-10">
             {navLinks.map((link, index) => (
                 <React.Fragment key={index}>
                     <a className="text-center text-2xl font-roobert hover:underline" href={link.href}>{link.label}</a>

@@ -12,6 +12,9 @@ export default {
           neuemontreal: 'var(--font-neuemontreal)',
           roobert: 'var(--font-roobert)',
       },
+      cursor: {
+        'view': 'url(/images/view-cursor.svg), auto',
+      },
       },
     },
     plugins: [],

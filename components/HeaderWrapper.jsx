@@ -20,7 +20,7 @@ const HeaderWrapper = ({
       <h1 className=" text-black text-[64px] font-roobert capitalize pb-3">
         {name || noinfo}
       </h1>
-      <p className="min-w-[620px] pb-6 text-black text-3xl font-neuemontreal">
+      <p className="max-w-[620px] pb-6 text-black text-3xl font-neuemontreal">
         {description || noinfo}
       </p>
       <div className="flex items-center gap-6 mb-10">
@@ -30,7 +30,7 @@ const HeaderWrapper = ({
         </p>
       </div>
       <div className="w-[784px] justify-between items-start inline-flex">
-        <div className="w-[210px] flex-col justify-start items-start gap-2 inline-flex">
+        <div className="max-w-[163px] flex-col justify-start items-start gap-2 inline-flex">
           <h6 className=" text-justify text-black text-xl font-medium font-roobert">
             Role
           </h6>
@@ -38,11 +38,11 @@ const HeaderWrapper = ({
             {role || noinfo}
           </p>
         </div>
-        <div className="flex-col justify-start items-start gap-2 flex">
+        <div className="flex-col justify-start items-start gap-2 flex max-w-[163px]">
           <h6 className="text-justify text-black text-xl font-medium font-roobert">
             Tools
           </h6>
-          <div className="text-justify text-[#939396] text-xl font-normal font-neuemontreal flex flex-col">
+          <div className="text-justify text-[#939396] text-xl font-normal font-neuemontreal flex flex-col max-w-[163px]">
             {tools && tools.length > 0
               ? tools.map((tool, index) => (
                   <span key={index}>{tool || noinfo}</span>
@@ -50,7 +50,7 @@ const HeaderWrapper = ({
               : noinfo}
           </div>
         </div>
-        <div className="flex-col justify-start items-start gap-2 flex">
+        <div className="flex-col justify-start items-start gap-2 flex max-w-[163px]">
           <h6 className=" text-justify text-black text-xl font-medium font-roobert">
             Timeline
           </h6>

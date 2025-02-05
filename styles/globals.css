@@ -6,6 +6,9 @@
     --font-departure: 'DepartureMono', monospace;
     --font-neuemontreal: 'NeueMontreal', sans-serif;
     --font-roobert: 'Roobert', sans-serif;
+    cursor: crosshair;
+    background-image: url('/images/background.png');
+    background-repeat: repeat;
 }
 
 /* DepartureMono */

@@ -15,9 +15,6 @@ const Play = () => {
       <NavBar />
       <div className="flex flex-col justify-start mx-[120px]">  
         <div className="flex flex-col justify-start items-start gap-[18px] w-full mb-28 mt-[169px]">
-          <h6 className=" text-[#939396] text-2xl font-normal font-departure uppercase">
-            Welcome to the
-          </h6>
           <h1 className=" text-black text-8xl font-normal font-roobert capitalize">
             Playground
           </h1>
@@ -34,6 +31,7 @@ const Play = () => {
             tags={project.tags}
             date={project.date}
             src={project.src}
+            page={project.page}
           />
         ))}
       </div>

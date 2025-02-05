@@ -1,32 +1,36 @@
 {
     "projects": [
         {
-            "name": "",
-            "description": "",
-            "tags": "",
-            "date": "",
-            "src": ""
+            "name": "Harmony",
+            "description": "Made for families and in-home caregivers of individuals with long-term conditions, focusing on underrepresented and immigrant communities.",
+            "tags": ["Product Design", "Mobile App"],
+            "date": "Aug - Dec 2024",
+            "src": "/images/harmony-cover-img.jpg",
+            "page": "/projects/harmony"
+        },
+        {
+            "name": "Circles",
+            "description": "A dedicated app for close friends who enjoy capturing and sharing group photos of their milestones and adventures.",
+            "tags": ["Product Design", "Mobile App"],
+            "date": "Jan - May 2024",
+            "src": "/images/circles-cover-img.jpg",
+            "page": "/projects/circles"
         },
         {
             "name": "",
             "description": "",
             "tags": "",
             "date": "",
-            "src": ""
+            "src": "",
+            "page": ""
         },
         {
             "name": "",
             "description": "",
             "tags": "",
             "date": "",
-            "src": ""
-        },
-        {
-            "name": "",
-            "description": "",
-            "tags": "",
-            "date": "",
-            "src": ""
+            "src": "",
+            "page": ""
         }
     ]
 }
