@@ -55,11 +55,8 @@ const AsciiArt = () => {
     if (!containerRef.current) return;
 
     const rect = containerRef.current.getBoundingClientRect();
-    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    const x = e.pageX - rect.left - scrollLeft; 
-    const y = e.pageY - rect.top - scrollTop;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
     setHoverPosition({ x, y });
   };
@@ -69,62 +66,59 @@ const AsciiArt = () => {
   };
 
   const renderAsciiArt = () => {
-    const radius = 50;
-    const charWidth = 8;
-    const charHeight = 16;
+    const radius = 150;
+    const charWidth = 7.5; 
+    const charHeight = 14;
     const lines = asciiArt.split("\n");
 
     return lines.map((line, row) => (
       <div key={row} style={{ display: "block" }}>
-        {line.split("").map((char, col) => {
-          const charCenterX = col * charWidth;
-          const charCenterY = row * charHeight;
+        {line.split("" ).map((char, col) => {
+          const charCenterX = col * charWidth + charWidth / 2;
+          const charCenterY = row * charHeight + charHeight / 2;
 
-          const distance = Math.sqrt(
-            Math.pow(charCenterX - hoverPosition.x, 2) +
-              Math.pow(charCenterY - hoverPosition.y, 2)
-          );
+          const dx = charCenterX - hoverPosition.x;
+          const dy = charCenterY - hoverPosition.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
 
           const isWithinRadius = distance <= radius;
-            return (
+
+          return (
             <span
               key={col}
               style={{
-              fontWeight: isWithinRadius ? "bold" : "normal",
-              fontStyle: isWithinRadius ? "italic" : "normal",
-              color: isWithinRadius ? "#DB0032" : "black",
-              transition: "color 0.3s ease-in-out"
+                fontWeight: isWithinRadius ? "bold" : "normal",
+                fontStyle: isWithinRadius ? "italic" : "normal",
+                color: isWithinRadius ? "#DB0032" : "black",
+                transition: "color 0.4s ease-in-out",
               }}
             >
               {char}
             </span>
-            );
+          );
         })}
       </div>
     ));
-  };
-
-  const containerStyle = {
-    position: "relative",
-    display: "inline-block",
-  };
-
-  const asciiArtStyle = {
-    fontFamily: "monospace",
-    whiteSpace: "pre",
-    fontSize: "12px",
-    lineHeight: "12px",
   };
 
   return (
     <div
       className="select-none"
       ref={containerRef}
-      style={containerStyle}
+      style={{ position: "relative", display: "inline-block" }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      <div style={asciiArtStyle}>{renderAsciiArt()}</div>
+      <div
+        style={{
+          fontFamily: "monospace",
+          whiteSpace: "pre",
+          fontSize: "12px",
+          lineHeight: "12px",
+        }}
+      >
+        {renderAsciiArt()}
+      </div>
     </div>
   );
 };
