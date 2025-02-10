@@ -3,8 +3,7 @@ import NavBar from '@/components/NavBar';
 import Head from 'next/head';
 import projects from '/data/projects';
 import Footer from '@/components/Footer';
-import AsciiArt from '@/components/AsciiArt'
-import Banner from '@/components/Banner';
+import AsciiArt from '@/components/AsciiArt';
 
 export default function Home() {
 
@@ -14,11 +13,10 @@ export default function Home() {
         <title>home</title>
         <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
       </Head>
-      <Banner/> 
       <NavBar/>
-      {/* <div className='absolute top-0 right-0 mt-24'>
+      <div className='absolute top-0 right-0 mt-24'>
       <AsciiArt/>
-      </div> */}
+      </div>
       <div className='flex flex-row justify-center items-center'>
         <div className='flex flex-col justify-start'>
           <div>
