@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="mx-20 my-14 flex flex-col justify-start items-start gap-16">
       <h1 className="h-[77px] text-black text-5xl font-medium font-roobert">
-        Get in touch
+        Get in touch!
       </h1>
       <div className="flex w-full justify-between items-end gap-20">
         <div className="flex flex-row justify-start items-center gap-10">

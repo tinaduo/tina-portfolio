@@ -34,8 +34,12 @@ const HeaderWrapper = ({
           <h6 className=" text-justify text-black text-xl font-medium font-roobert">
             Role
           </h6>
-          <p className=" text-[#939396] text-xl font-normal font-neuemontreal">
-            {role || noinfo}
+          <p className="text-[#939396] text-xl font-normal font-neuemontreal flex flex-col max-w-[163px]">
+            {role && role.length > 0
+              ? role.map((role, index) => (
+                  <span key={index}>{role || noinfo}</span>
+                ))
+              : noinfo}
           </p>
         </div>
         <div className="flex-col justify-start items-start gap-2 flex max-w-[163px]">

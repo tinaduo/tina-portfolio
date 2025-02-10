@@ -1,15 +1,15 @@
 {
     "project": [
         {
-            "name": "Groove",
-            "description": "A hub for music lovers to share reviews, craft playlists, and spark conversations.",
-            "tags": "Design Showcase",
-            "role": "Graphic and UX/UI Designer",
+            "name": "Harmony",
+            "description": "Empowering caregivers with the tools that make a difference.",
+            "tags": "Case Study",
+            "role": ["Project Manager", "Graphic and UX/UI Designer"],
             "tools": ["Figma", "Illustrator", "After Effects"],
-            "startDate": "Jan",
-            "endDate": "May",
+            "startDate": "Aug",
+            "endDate": "Dec",
             "year": 2024,
-            "minutes": 5
+            "minutes": null
         }
     ]
 }
