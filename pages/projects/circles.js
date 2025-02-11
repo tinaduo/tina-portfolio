@@ -14,8 +14,8 @@ const Circles = () => {
       </Head>
       <NavBar />
       <div>
-        <img className="w-screen h-[538px]" src="/images/monkey-dancing.gif" />
-        {project.project.slice(0, 1).map((project, index) => (
+        <img className="w-screen h-[538px] object-cover" src="/images/circles-cover-img.jpg" />
+        {project.project.slice(1, 2).map((project, index) => (
           <HeaderWrapper
             key={index}
             name={project.name}

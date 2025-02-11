@@ -1,5 +1,6 @@
 import React from "react";
 import Tag from "./Tag";
+import TableOfContent from "./TableofContent";
 
 const noinfo = "not available";
 
@@ -42,7 +43,7 @@ const HeaderWrapper = ({
               : noinfo}
           </p>
         </div>
-        <div className="flex-col justify-start items-start gap-2 flex max-w-[163px]">
+        <div className="flex-col justify-start gap-2 flex max-w-[163px]">
           <h6 className="text-justify text-black text-xl font-medium font-roobert">
             Tools
           </h6>

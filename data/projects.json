@@ -3,7 +3,7 @@
         {
             "name": "Harmony",
             "description": "Made for families and in-home caregivers of individuals with long-term conditions, focusing on underrepresented and immigrant communities.",
-            "tags": ["Product Design", "Mobile App"],
+            "tags": ["Case Study","Product Design", "Mobile App"],
             "date": "Aug - Dec 2024",
             "src": "/images/harmony-cover-img.jpg",
             "page": "/projects/harmony"
@@ -17,12 +17,12 @@
             "page": "/projects/circles"
         },
         {
-            "name": "",
-            "description": "",
-            "tags": "",
-            "date": "",
-            "src": "",
-            "page": ""
+            "name": "Groove",
+            "description": "A social platform that lets users review and discuss songs, albums, and artists, enhancing engagement through personalized profiles.",
+            "tags": ["Product Design", "Mobile App"],
+            "date": "Jan - May 2024",
+            "src": "images/groove-cover-img.jpg",
+            "page": "/projects/groove"
         },
         {
             "name": "",

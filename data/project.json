@@ -10,6 +10,61 @@
             "endDate": "Dec",
             "year": 2024,
             "minutes": null
+        },
+        {
+            "name": "Circles",
+            "description": "A dedicated app for close friends who enjoy capturing and sharing group photos of their milestones and adventures.",
+            "tags": "Product Design",
+            "role": ["Project Manager", "Graphic and UX/UI Designer"],
+            "tools": ["Figma", "Illustrator", "After Effects"],
+            "startDate": "Jan",
+            "endDate": "May",
+            "year": 2024,
+            "minutes": null
+        },
+        {
+            "name": "Groove",
+            "description": "A social platform that lets users review and discuss songs, albums, and artists, enhancing engagement through personalized profiles.",
+            "tags": "Product Design",
+            "role": ["Project Manager", "Graphic and UX/UI Designer"],
+            "tools": ["Figma", "Illustrator", "After Effects"],
+            "startDate": "Jan",
+            "endDate": "May",
+            "year": 2024,
+            "minutes": null
+        },
+        {
+            "name": "Harmony",
+            "description": "Empowering caregivers with the tools that make a difference.",
+            "tags": "Case Study",
+            "role": ["Project Manager", "Graphic and UX/UI Designer"],
+            "tools": ["Figma", "Illustrator", "After Effects"],
+            "startDate": "Aug",
+            "endDate": "Dec",
+            "year": 2024,
+            "minutes": null
+        },
+        {
+            "name": "Circles",
+            "description": "A dedicated app for close friends who enjoy capturing and sharing group photos of their milestones and adventures.",
+            "tags": "Product Design",
+            "role": ["Project Manager", "Graphic and UX/UI Designer"],
+            "tools": ["Figma", "Illustrator", "After Effects"],
+            "startDate": "Jan",
+            "endDate": "May",
+            "year": 2024,
+            "minutes": null
+        },
+        {
+            "name": "Groove",
+            "description": "A social platform that lets users review and discuss songs, albums, and artists, enhancing engagement through personalized profiles.",
+            "tags": "Product Design",
+            "role": ["Project Manager", "Graphic and UX/UI Designer"],
+            "tools": ["Figma", "Illustrator", "After Effects"],
+            "startDate": "Jan",
+            "endDate": "May",
+            "year": 2024,
+            "minutes": null
         }
     ]
 }
