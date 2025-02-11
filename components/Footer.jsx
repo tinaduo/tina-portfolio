@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import AsciiCatArt from "./CatAsciiArt";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +10,7 @@ const Footer = () => {
       <h1 className="h-[77px] text-black text-5xl font-medium font-roobert">
         Get in touch!
       </h1>
-      <div className="flex w-full justify-between items-end gap-20">
+      <div className="flex w-full justify-between items-between gap-20">
         <div className="flex flex-row justify-start items-center gap-10">
           <Link
             href="mailto:totinaduong@gmail.com"
@@ -24,9 +25,12 @@ const Footer = () => {
             LinkedIn↗
           </Link>
         </div>
-        <h3 className="text-[#939396] text-sm font-medium font-neuemontreal">
+        <div className="flex flex-col justify-end items-end gap-4">
+          <AsciiCatArt />
+          <h3 className="text-[#939396] text-sm font-medium font-neuemontreal">
           @{currentYear} Tina Duong
         </h3>
+        </div>
       </div>
     </footer>
   );

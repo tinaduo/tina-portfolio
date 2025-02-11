@@ -106,8 +106,8 @@ const Harmony = () => {
               resources, and heightened emotional stress.
             </p>
             <section className="flex flex-row justify-center gap-3.5 items-center my-8">
-              <img className="w-[300px]" src="/images/david-persona.png" />
-              <img className="w-[300px]" src="/images/maria-persona.png" />
+              <img className="w-[400px]" src="/images/david-persona.png" />
+              <img className="w-[400px]" src="/images/maria-persona.png" />
             </section>
 
             <section className="flex flex-col gap-3.5 my-28">
