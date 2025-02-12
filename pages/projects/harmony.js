@@ -143,6 +143,13 @@ const Harmony = () => {
                 personal life demands.
               </li>
             </ul>
+            <iframe
+              className="mt-8"
+              width="800"
+              height="450"
+              src="https://embed.figma.com/board/zuFBo2GuM3mMUGwCXVwylr/harmony-user-flow-and-user-story-map?node-id=0-1&embed-host=share&hide-ui=1"
+              allowfullscreen
+            ></iframe>
             <h3 className="text-4xl font-medium font-roobert mt-8">
               Design Solutions
             </h3>
@@ -320,7 +327,7 @@ const Harmony = () => {
               </div>
             </div>
             <div className="flex-col justify-end items-center gap-6 inline-flex mb-4">
-              <img className="w-fit" src="/images/image 8.png"/>
+              <img className="w-fit" src="/images/image 8.png" />
               <div className="text-center text-black/75 text-sm font-normal font-departure">
                 Brainstorming different business cards designs unique layouts
                 and shapes.

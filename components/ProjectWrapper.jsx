@@ -20,11 +20,9 @@ const noinfo = "not available";
                     <h6 className=" text-[#3b3d41]/50 text-sm font-departure">{date || noinfo}</h6>
                     <div className=" h-[106px] flex-col justify-start gap-[15px] flex">
                         <h1 className=" text-[#0e0e0e] text-[28px] font-medium font-roobert">{name || noinfo}</h1>
-                        <p className=" text-[#3b3d41] text-lg font-neuemontreal max-w-[420px]">{description || noinfo}</p>
-                    </div>
-                </div>
-                <div className="justify-start items-start gap-2 inline-flex">
+                        <p className=" text-[#3b3d41] text-lg font-neuemontreal w-[420px]">{description || noinfo}</p>
                     <Tag text={tags || noinfo}/>
+                    </div>
                 </div>
             </div>
             <div className="overflow-hidden ">

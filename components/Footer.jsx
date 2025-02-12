@@ -19,6 +19,7 @@ const Footer = () => {
             Email↗
           </Link>
           <Link
+            target="_blank"
             href="https://www.linkedin.com/in/-tinaduong/"
             className="text-black text-3xl font-medium font-roobert hover:underline"
           >
