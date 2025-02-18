@@ -16,7 +16,7 @@ const Harmony = () => {
       <NavBar />
       <img
         className="w-screen h-[538px] object-cover"
-        src="/images/harmony-cover-img.jpg"
+        src="/images/harmony/harmony-hero-img.jpg"
       />
       {project.project.slice(0, 1).map((project, index) => (
         <HeaderWrapper
@@ -50,10 +50,10 @@ const Harmony = () => {
             <br />
             <p className="mb-8">
               All of this while striving to maintain personal well-being. For
-              more than five million Canadians, this daily challenge is
-              particularly pronounced in underrepresented communities, where
-              resources are limited and support networks can feel distant or out
-              of reach.
+              more than <strong>five million Canadians</strong>, this daily
+              challenge is particularly pronounced in underrepresented
+              communities, where resources are limited and support networks can
+              feel distant or out of reach.
             </p>
           </section>
 
@@ -83,31 +83,49 @@ const Harmony = () => {
               </h3>
               <p className="w-[450px]">
                 Harmony is a web app designed to reduce the overwhelm caregivers
-                face. With AI-powered tools and collaborative features, Harmony
-                provides caregivers with the tools they need to create
-                sustainable care routines. The app helps ensure high-quality
-                care tailored to the unique needs of loved ones, reducing stress
-                and supporting balance.
+                face. With AI-powered tools and collaborative features. The app
+                helps ensure high-quality care tailored to the unique needs of
+                loved ones, reducing stress and supporting balance.
               </p>
             </div>
-            <img className="w-[350px]" src="/images/harmony-1.png" />
+            <img className="w-[350px]" src="/images/harmony/harmony-1.png" />
           </section>
 
           <section className="">
             <h2 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
               Research
             </h2>
-            <h3 className="text-4xl font-medium font-roobert">Key Findings</h3>
+            <h3 className="text-4xl font-medium font-roobert">
+              Understanding the problem
+            </h3>
             <p>
-              Through conducting over 10 interviews with caregivers, we
+              Through conducting over 12 interviews with caregivers, we
               identified several critical pain points. Our research revealed
-              that caregivers from underrepresented communities often face
-              distinct challenges, such as language barriers, limited access to
-              resources, and heightened emotional stress.
+              that caregivers from underrepresented communities often face...
             </p>
-            <section className="flex flex-row justify-center gap-3.5 items-center my-8">
-              <img className="w-[400px]" src="/images/david-persona.png" />
-              <img className="w-[400px]" src="/images/maria-persona.png" />
+            <section className="flex flex-row my-8">
+
+              <div className="flex flex-row items-end">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="20"
+                  viewBox="0 0 42 62"
+                  fill="none"
+                  class="speech-tail"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M-2.72568e-06 61.8686H8.77486C27.0003 61.8686 41.7749 47.094 41.7749 28.8686C41.7749 16.4487 34.9137 5.63129 24.7748 -1.877e-06V24.8682C24.7748 41.569 14.5398 55.8793 -2.72568e-06 61.8686Z"
+                    fill="currentColor"
+                    class="path"
+                  ></path>
+                </svg>
+                <div class="p-12 bg-amber-600">
+                  <p class="text-white">Lack of community support</p>
+                </div>
+              </div>
             </section>
 
             <section className="flex flex-col gap-3.5 my-28">
@@ -123,7 +141,10 @@ const Harmony = () => {
                   messaging to resource sharing and privacy-focused tools.
                 </p>
               </div>
-              <img className="pt-2" src="/images/COMPETITIVE_ANALYSIS.png" />
+              <img
+                className="pt-2"
+                src="/images/harmony/COMPETITIVE_ANALYSIS.png"
+              />
               <p className="font-departure text-center text-black/80 text-sm font-normal">
                 This analysis highlights key strengths and gaps in existing
                 solutions.
@@ -181,15 +202,21 @@ const Harmony = () => {
 
             <section className="flex flex-col gap-3.5 mb-8">
               <div className="flex flex-row justify-between items-center gap-3.5">
-                <img className="w-[200px]" src="/images/harmonycall-lofi.png" />
-                <img className="w-[200px]" src="/images/harmonyhome-lofi.png" />
                 <img
                   className="w-[200px]"
-                  src="/images/harmonycalendar-lofi.png"
+                  src="/images/harmony/harmonycall-lofi.png"
                 />
                 <img
                   className="w-[200px]"
-                  src="/images/harmonyjournal-lofi.png"
+                  src="/images/harmony/harmonyhome-lofi.png"
+                />
+                <img
+                  className="w-[200px]"
+                  src="/images/harmony/harmonycalendar-lofi.png"
+                />
+                <img
+                  className="w-[200px]"
+                  src="/images/harmony/harmonyjournal-lofi.png"
                 />
               </div>
               <p className="text-center text-black/75 text-sm font-normal font-departure w-full">
@@ -199,15 +226,21 @@ const Harmony = () => {
 
             <section className="flex flex-col gap-3.5">
               <div className="flex flex-row justify-between items-center gap-3.5">
-                <img className="w-[200px]" src="/images/harmonycall-hifi.png" />
-                <img className="w-[200px]" src="/images/harmonyhome-hifi.png" />
                 <img
                   className="w-[200px]"
-                  src="/images/harmonycalendar-hifi.png"
+                  src="/images/harmony/harmonycall-hifi.png"
                 />
                 <img
                   className="w-[200px]"
-                  src="/images/harmonyjournal-hifi.png"
+                  src="/images/harmony/harmonyhome-hifi.png"
+                />
+                <img
+                  className="w-[200px]"
+                  src="/images/harmony/harmonycalendar-hifi.png"
+                />
+                <img
+                  className="w-[200px]"
+                  src="/images/harmony/harmonyjournal-hifi.png"
                 />
               </div>
               <p className="text-center text-black/75 text-sm font-normal font-departure w-full">
@@ -327,7 +360,7 @@ const Harmony = () => {
               </div>
             </div>
             <div className="flex-col justify-end items-center gap-6 inline-flex mb-4">
-              <img className="w-fit" src="/images/image 8.png" />
+              <img className="w-fit" src="/images/harmony/image 8.png" />
               <div className="text-center text-black/75 text-sm font-normal font-departure">
                 Brainstorming different business cards designs unique layouts
                 and shapes.
@@ -346,7 +379,10 @@ const Harmony = () => {
                   includes contact details.
                 </div>
               </div>
-              <img className="w-[493px] h-[396px]" src="/images/image 7.png" />
+              <img
+                className="w-[493px] h-[396px]"
+                src="/images/harmony/image 7.png"
+              />
             </div>
 
             <div className="justify-between items-center flex flex-col my-28">
@@ -365,7 +401,7 @@ const Harmony = () => {
               <div className="flex w-full h-fit justify-center gap-4">
                 <img
                   className="w-[320px] h-fit"
-                  src="/images/f116bcd6f39b62bf3362e79209d1d523.jpeg"
+                  src="/images/harmony/harmony_pvc_card.jpeg"
                 />
                 <div className="flex-col gap-3.5 flex">
                   <FlipCard />
@@ -385,7 +421,10 @@ const Harmony = () => {
                 visually engaging, with the goal of encouraging app downloads,
                 showcasing key features, and building trust with caregivers.
               </p>
-              <img className="mb-8" src="/images/customer-landing-page.png" />
+              <img
+                className="mb-8"
+                src="/images/harmony/customer-landing-page.png"
+              />
               <p className="text-center text-black/75 text-sm font-normal font-departure w-full">
                 Check out
                 <a
@@ -400,7 +439,7 @@ const Harmony = () => {
         </div>
 
         <section className="mb-8">
-          <img className="w-screen h-40" src="/images/black_fadein.png"></img>
+          <img className="w-screen h-44" src="/images/black_fadein.png"></img>
           <div className="flex flex-row justify-center items-center h-screen w-screen bg-gradient-to-b from-[#1d1e23] to-[#18191c] text-white">
             <div className="flex flex-col gap-12 pr-24">
               <div className="flex flex-col justify-center items-center gap-3">
@@ -462,7 +501,7 @@ const Harmony = () => {
             </div>
             <iframe
               width="800"
-              height="1100"
+              height="800"
               src="https://embed.figma.com/proto/dRQ3ywleMzjy15UK4yIC9W/harmony-design?page-id=1981%3A6447&node-id=1981-6740&p=f&viewport=541%2C2174%2C0.17&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1981%3A6766&show-proto-sidebar=1&embed-host=share&hide-ui=1"
             ></iframe>
           </div>
@@ -515,7 +554,7 @@ const Harmony = () => {
           <section className="my-[164px] flex flex-col items-center">
             <img
               className="mix-blend-darken w-[74px] h-[74px]"
-              src="/images/harmony-mascot.gif"
+              src="/images/harmony/harmony-mascot.gif"
             />
             <h1 className="text-center text-8xl font-roobert mb-8">
               Thank You!

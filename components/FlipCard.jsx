@@ -20,13 +20,13 @@ export default function FlipCard() {
                 >
                     {/* front side */}
                     <div className="absolute rounded-md w-full h-full flex items-center justify-center text-lg font-bold [backface-visibility:hidden] overflow-hidden">
-                        <img src="/images/harmony_id_front.png" className="w-full h-full object-cover" />
+                        <img src="/images/harmony/harmony_id_front.png" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 opacity-0 hover:opacity-100 transition-opacity duration-300" />
                     </div>
                     
                     {/* back side */}
                     <div className="w-full h-full flex items-center justify-center text-lg font-bold [backface-visibility:hidden] [transform:rotateY(180deg)] relative overflow-hidden">
-                        <img src="/images/harmony_id_back.png" className="w-full h-full object-cover" />
+                        <img src="/images/harmony/harmony_id_back.png" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-white/10 opacity-0 hover:opacity-100 transition-opacity duration-300" />
                     </div>
                 </div>

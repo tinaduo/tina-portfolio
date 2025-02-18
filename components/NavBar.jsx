@@ -2,7 +2,7 @@ import React from 'react';
 
 const navLinks = [
     { href: '/', label: 'home' },
-    { href: '/play', label: 'play' },
+    { href: '/work', label: 'work' },
     { href: '/about', label: 'about' },
     { href: 'https://drive.google.com/file/d/1SYBD-p3pOFEPXoXfBztsl3QD5hqA9oK_/view?usp=sharing', label: 'resume' }
 ];

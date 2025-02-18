@@ -66,14 +66,14 @@ const AsciiArt = () => {
   };
 
   const renderAsciiArt = () => {
-    const radius = 150;
-    const charWidth = 7.5; 
+    const radius = 120;
+    const charWidth = 7.5;
     const charHeight = 14;
     const lines = asciiArt.split("\n");
 
     return lines.map((line, row) => (
       <div key={row} style={{ display: "block" }}>
-        {line.split("" ).map((char, col) => {
+        {line.split("").map((char, col) => {
           const charCenterX = col * charWidth + charWidth / 2;
           const charCenterY = row * charHeight + charHeight / 2;
 
