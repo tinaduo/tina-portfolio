@@ -13,7 +13,7 @@
             "description": "A dedicated app for close friends who enjoy capturing and sharing group photos of their milestones and adventures.",
             "tags": ["Product Design", "Mobile App"],
             "date": "Jan - May 2024",
-            "src": "/images/circles-cover-img.jpg",
+            "src": "/images/circles/circles-cover-img.jpg",
             "page": "/projects/circles"
         },
         {
@@ -21,7 +21,7 @@
             "description": "A social platform that lets users review and discuss songs, albums, and artists, enhancing engagement through personalized profiles.",
             "tags": ["Product Design", "Mobile App"],
             "date": "Jan - May 2024",
-            "src": "images/groove-cover-img.jpg",
+            "src": "/images/groove/groove-cover-img.jpg",
             "page": "/projects/groove"
         },
         {

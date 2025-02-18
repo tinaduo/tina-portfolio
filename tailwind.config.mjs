@@ -7,15 +7,15 @@ export default {
   ],
   theme: {
     extend: {
-        fontFamily: {
-          departure: 'var(--font-departure)',
-          neuemontreal: 'var(--font-neuemontreal)',
-          roobert: 'var(--font-roobert)',
+      fontFamily: {
+        departure: 'var(--font-departure)',
+        neuemontreal: 'var(--font-neuemontreal)',
+        roobert: 'var(--font-roobert)',
       },
       cursor: {
         'view': 'url(/images/view-cursor.svg), auto',
       },
-      },
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
+};

@@ -10,13 +10,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="mx-auto py-16 max-w-[1400px]">
-      <div className="flex flex-row justify-between items-start md:items-center gap-12">
-        <div className="flex flex-col gap-16 w-full md:w-auto">
+    <footer className="mx-24">
+      <div className="flex flex-row justify-between items-center py-12">
+        <div className="flex flex-col gap-12">
           <h1 className="text-black text-4xl md:text-5xl font-medium font-roobert">
             Get in touch!
           </h1>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row justify-between">
             <Link
               href="mailto:totinaduong@gmail.com"
               className="text-black text-2xl md:text-3xl font-medium font-roobert hover:underline"

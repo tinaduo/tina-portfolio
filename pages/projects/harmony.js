@@ -104,27 +104,8 @@ const Harmony = () => {
               that caregivers from underrepresented communities often face...
             </p>
             <section className="flex flex-row my-8">
-
               <div className="flex flex-row items-end">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="20"
-                  viewBox="0 0 42 62"
-                  fill="none"
-                  class="speech-tail"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M-2.72568e-06 61.8686H8.77486C27.0003 61.8686 41.7749 47.094 41.7749 28.8686C41.7749 16.4487 34.9137 5.63129 24.7748 -1.877e-06V24.8682C24.7748 41.569 14.5398 55.8793 -2.72568e-06 61.8686Z"
-                    fill="currentColor"
-                    class="path"
-                  ></path>
-                </svg>
-                <div class="p-12 bg-amber-600">
-                  <p class="text-white">Lack of community support</p>
-                </div>
+
               </div>
             </section>
 
@@ -150,7 +131,6 @@ const Harmony = () => {
                 solutions.
               </p>
             </section>
-
             <h3 className="text-4xl font-medium font-roobert mt-8">
               Insights from Research
             </h3>
