@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const navLinks = [
   { href: "/about", label: "about" },
@@ -10,11 +11,26 @@ const navLinks = [
 ];
 
 const NavBar = () => {
-  const scrollToWork = (e) => {
+  const router = useRouter();
+
+  const handleWorkClick = (e) => {
     e.preventDefault();
-    const element = document.getElementById("work-section");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    
+    // If we're not on the home page, first navigate to home
+    if (router.pathname !== '/') {
+      router.push('/').then(() => {
+        // After navigation, scroll to work section
+        const element = document.getElementById("work-section");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    } else {
+      // If already on home page, just scroll
+      const element = document.getElementById("work-section");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -24,13 +40,13 @@ const NavBar = () => {
         home
       </a>
       <span className="text-center text-2xl font-roobert px-2"> / </span>
-      <Link 
-        className="text-center text-2xl font-roobert px-2"
+      <a 
+        className="text-center text-2xl font-roobert hover:underline px-2"
         href="/#work-section" 
-        onClick={scrollToWork}
-        >
-            work
-    </Link>
+        onClick={handleWorkClick}
+      >
+        work
+      </a>
       <span className="text-center text-2xl font-roobert px-2"> / </span>
       {navLinks.map((link, index) => (
         <React.Fragment key={index}>
