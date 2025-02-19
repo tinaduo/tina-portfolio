@@ -35,19 +35,19 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="flex flex-row justify-center py-14 z-10">
+    <nav className="flex flex-row justify-center py-14 gap-4 z-10">
       <a className="text-center text-2xl font-roobert hover:underline" href="/">
         home
       </a>
-      <span className="text-center text-2xl font-roobert px-2"> / </span>
+      <span className="text-center text-2xl font-roobert"> / </span>
       <a 
-        className="text-center text-2xl font-roobert hover:underline px-2"
+        className="text-center text-2xl font-roobert hover:underline"
         href="/#work-section" 
         onClick={handleWorkClick}
       >
         work
       </a>
-      <span className="text-center text-2xl font-roobert px-2"> / </span>
+      <span className="text-center text-2xl font-roobert"> / </span>
       {navLinks.map((link, index) => (
         <React.Fragment key={index}>
           <a
@@ -57,7 +57,7 @@ const NavBar = () => {
             {link.label}
           </a>
           {index < navLinks.length - 1 && (
-            <span className="text-center text-2xl font-roobert px-2"> / </span>
+            <span className="text-center text-2xl font-roobert"> / </span>
           )}
         </React.Fragment>
       ))}

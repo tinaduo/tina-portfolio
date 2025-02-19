@@ -12,10 +12,7 @@ const About = () => {
       </Head>
       <NavBar />
       <div className="flex flex-row gap-20 justify-start mx-[120px] mt-[100px] mb-28">
-        <img
-          className="w-[455px] h-[455px]"
-          src="/images/monkey-dancing.gif"
-        />
+        <img className="w-[455px] h-[455px]" src="/images/monkey-dancing.gif" />
         <div className="flex flex-col gap-9">
           <div className="lol">
             <h6 className="text-justify text-[#939396] text-2xl font-normal font-departure uppercase">
@@ -30,10 +27,10 @@ const About = () => {
           </div>
 
           <p className="w-[785px] text-[#3b3d41] text-xl font-medium font-neuemontreal">
-            Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-            tellus elit sed risus.
+            I’m a UX/UI designer passionate about creating intuitive and
+            community-driven digital experiences. My goal is to design with
+            purpose—helping people navigate technology in a way that feels
+            natural, inclusive, and meaningful.
           </p>
 
           <div className="flex-col justify-start items-start gap-4 flex">
@@ -41,24 +38,19 @@ const About = () => {
               Why design? & a bit about me.
             </h1>
             <p className="text-[#3b3d41] text-xl font-medium font-neuemontreal">
-              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-              nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-              tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-              feugiat lectus. Class aptent taciti sociosqu ad litora torquent
-              per conubia nostra, per inceptos himenaeos. Praesent auctor purus
-              luctus enim egestas, ac scelerisque ante pulvinar. Donec ut
-              rhoncus ex.
+              Design isn’t just about aesthetics—it’s about problem-solving.
+              Growing up in an immigrant household, I saw firsthand how
+              technology could be both a barrier and a bridge. This shaped my
+              approach to design: accessibility and user-centered thinking come
+              first. I thrive on crafting experiences that simplify complex
+              processes, ensuring that no one feels left out in the digital
+              world. 
               <br />
               <br />
-              Rorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-              turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-              nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-              tellus elit sed risus. Maecenas eget condimentum velit, sit amet
-              feugiat lectus. Class aptent taciti sociosqu ad litora torquent
-              per conubia nostra, per inceptos himenaeos. Praesent auctor purus
-              luctus enim egestas, ac scelerisque ante pulvinar. Donec ut
-              rhoncus ex.
+              Beyond design, I find inspiration in culture, storytelling,
+              and human connections. Whether it’s through my work or everyday
+              conversations, I love uncovering what makes people tick and
+              translating that into impactful digital solutions.
             </p>
           </div>
 
@@ -88,17 +80,17 @@ const About = () => {
             </p>
           </div>
 
-                    <div className="flex-col justify-start items-start gap-4 flex">
+          <div className="flex-col justify-start items-start gap-4 flex">
             <h1 className="text-justify text-black text-3xl font-normal font-roobert">
               My current favourites.
             </h1>
-                <ul className="list-disc text-[#3b3d41] text-xl font-medium font-neuemontreal ml-4">
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                  </ul>
+            <ul className="list-disc text-[#3b3d41] text-xl font-medium font-neuemontreal ml-4">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
           </div>
         </div>
       </div>
