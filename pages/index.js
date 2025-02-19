@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import AsciiArt from '@/components/AsciiArt';
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -22,10 +23,10 @@ export default function Home() {
             <div className="flex flex-col justify-start items-start gap-[18px] w-full mb-[100px] sm:mb-[120px] md:mb-[180px] lg:mb-[237px] mt-[80px] sm:mt-[100px] md:mt-[140px] lg:mt-[169px]">
               <h6 className="text-[#939396] text-lg sm:text-xl md:text-2xl font-normal font-departure uppercase">Hello! I'm</h6>
               <h1 className="text-black text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-normal font-roobert capitalize">Tina Duong</h1>
-              <p className="text-[#939396] text-xl sm:text-2xl md:text-3xl font-normal font-neuemontreal w-full max-w-[620px]">Crafting meaningful, intuitive, and engaging human <br/> experiences in the digital world.</p>
+              <p className="text-[#939396] text-xl sm:text-2xl md:text-3xl font-normal font-neuemontreal w-[500px] max-w-[600px]">Crafting meaningful, intuitive, and engaging human experiences in the digital world.</p>
             </div>
           </div>
-          <div className='w-full mt-12'>
+          <div id="work-section"  className='w-full mt-12'>
             {projects.projects.map((project, index) => (
               <ProjectWrapper
                 key={index}

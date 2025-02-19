@@ -4,6 +4,8 @@ import Head from "next/head";
 import Footer from "@/components/Footer";
 import HeaderWrapper from "@/components/HeaderWrapper";
 import project from "@/data/project.json";
+import Link from "next/link";
+import { ImgComparisonSlider } from "@img-comparison-slider/react";
 
 const Groove = () => {
   return (
@@ -16,7 +18,7 @@ const Groove = () => {
       <div>
         <img
           className="w-screen h-[538px] object-cover"
-          src="/images/groove-cover-img.jpg"
+          src="/images/groove/groove-hero-img.jpg"
         />
         {project.project.slice(2, 3).map((project, index) => (
           <HeaderWrapper
@@ -33,8 +35,8 @@ const Groove = () => {
           />
         ))}
       </div>
-      <div className="max-w-6xl mx-auto p-6 text-gray-800 font-neuemontreal text-xl">
-        <div className="flex-col justify-start items-start gap-3 flex">
+      <div className="flex flex-col max-w-6xl mx-auto p-6 text-gray-800 font-neuemontreal text-xl gap-[164px]">
+        <section className="flex-col justify-start items-start gap-3 flex mt-[175px]">
           <h1 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
             Introduction
           </h1>
@@ -46,9 +48,9 @@ const Groove = () => {
             discovery, it can overwhelm listeners trying to find music that
             matches their mood or activities.
           </p>
-        </div>
+        </section>
 
-        <div className="flex-col justify-start items-start gap-1 flex">
+        <section className="flex-col justify-start items-start gap-1 flex">
           <h2 className="text-justify text-[#db0132] text-2xl font-medium font-roobert uppercase">
             Challenge
           </h2>
@@ -60,7 +62,7 @@ const Groove = () => {
             that <strong className="mx-1">perfectly align</strong> with their
             <strong className="mx-1">moods and activities?</strong>
           </p>
-        </div>
+        </section>
 
         <div className="flex-row gap-2 flex items-center  justify-center">
           <div className="flex-col justify-start items-start gap-2 flex">
@@ -77,26 +79,26 @@ const Groove = () => {
               music discovery
             </p>
           </div>
-          <img src="/images/groove-screenshot.png" />
+          <img width={350} src="/images/groove/groove-screenshot.png" />
         </div>
 
-        <div className="w-[1030px] h-[423px] flex-col justify-start items-start gap-7 inline-flex">
-          <div className="self-stretch h-[167px] flex-col justify-start items-start gap-3.5 flex">
-            <div className="self-stretch text-justify text-black text-2xl font-medium font-roobert capitalize">
+        <div className="flex-col justify-start items-start gap-7 inline-flex">
+          <div className="flex-col justify-start items-start gap-3.5 flex">
+            <h1 className=" text-justify text-black text-2xl font-medium font-roobert capitalize">
               Design
-            </div>
-            <div className="self-stretch text-black text-[32px] font-medium font-roobert">
+            </h1>
+            <h6 className=" text-black text-[32px] font-medium font-roobert">
               Creating a seamless and intuitive experience
-            </div>
-            <div className="self-stretch text-black text-xl font-normal font-['Neue Montreal']">
+            </h6>
+            <p className=" text-black text-xl font-normal  font-neuemontreal">
               The primary flow was designed with first-time users in mind,
               ensuring the key features were easy to discover while maintaining
               a clean and intuitive interface. By adhering to specific product
               constraints, a focused and user-friendly approach was established:
-            </div>
+            </p>
           </div>
-          <div className="self-stretch h-[100px] flex-col justify-start items-start gap-1 flex">
-            <div className="self-stretch justify-start items-center gap-2 inline-flex">
+          <div className=" flex-col justify-start items-start gap-1 flex">
+            <div className=" justify-start items-center gap-2 inline-flex">
               <div data-svg-wrapper className="relative">
                 <svg
                   width="26"
@@ -142,20 +144,18 @@ const Groove = () => {
                   </defs>
                 </svg>
               </div>
-              <div className="text-black text-xl font-medium font-roobert uppercase">
+              <h5 className="text-black text-xl font-medium font-roobert uppercase">
                 The app is
-              </div>
+              </h5>
             </div>
-            <div className="self-stretch text-black text-xl font-normal font-['Neue Montreal']">
-              A tool for personalized music discovery.
-              <br />
-              Centered around user reviews and recommendations.
-              <br />
-              Designed to foster community engagement.
-            </div>
+            <ul className="pl-10 text-black text-xl list-disc font-normal font-neuemontreal">
+              <li>A tool for personalized music discovery.</li>
+              <li>Centered around user reviews and recommendations.</li>
+              <li>Designed to foster community engagement.</li>
+            </ul>
           </div>
-          <div className="self-stretch h-[100px] flex-col justify-start items-start gap-1 flex">
-            <div className="self-stretch justify-start items-center gap-2 inline-flex">
+          <div className="flex-col justify-start items-start gap-1 flex">
+            <div className=" justify-start items-center gap-2 inline-flex">
               <div data-svg-wrapper>
                 <svg
                   width="20"
@@ -170,18 +170,239 @@ const Groove = () => {
                   />
                 </svg>
               </div>
-              <div className="text-black text-xl font-medium font-roobert uppercase">
+              <h5 className="text-black text-xl font-medium font-roobert uppercase">
                 The app is not
-              </div>
+              </h5>
             </div>
-            <div className="text-black text-xl">
-              Overloaded with unnecessary features.
-              <br />A generic music streaming platform.
-              <br />
-              Complicated or overwhelming to navigate.
-            </div>
+            <ul className="pl-10 text-black text-xl list-disc font-normal font-neuemontreal">
+              <li>Overloaded with unnecessary features.</li>
+              <li>A generic music streaming platform.</li>
+              <li>omplicated or overwhelming to navigate</li>
+            </ul>
+            <img className="mt-12" src="/images/groove/groove_sitemap.png" />
+            <p className="text-center text-black/75 text-sm font-normal font-departure">
+              A site map that outlines the structure and hierarchy of Groove,
+              guiding users through a personalized onboarding process and
+              creating their first review.
+            </p>
           </div>
         </div>
+        <section className="flex-col justify-start items-start gap-3 flex">
+          <div className="flex-col justify-start items-start gap-3.5 flex">
+            <h6 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
+              Creating the Brand
+            </h6>
+            <h1 className="text-black text-[32px] font-medium font-roobert">
+              Retro Aesthetic Approach
+            </h1>
+            <p className="text-black text-xl font-normal font-neuemontreal">
+              Inspired by music's vibrant energy and diverse genres, Groove
+              delivers an experience that celebrates discovery and connection
+              through sound. The design combines liveliness with simplicity,
+              making it both inviting and easy to use. With friendly, engaging
+              copy, we've created a welcoming space where music lovers can
+              explore new tunes and feel right at home.
+            </p>
+            <img src="/images/groove/styleguide_groove.png" />
+          </div>
+        </section>
+
+        <section className="flex-row justify-between items-start gap-3 flex">
+          <div className="flex-col justify-start items-start gap-3.5 flex">
+            <div className="flex flex-row justify-between gap-6">
+              <img className="w-[242px]" src="/images/groove/chladni_1.png" />
+              <img className="w-[242px]" src="/images/groove/chladni_2.png" />
+            </div>
+            <p className="text-center text-black/75 text-sm w-full font-departure">
+              Chladni Figures (1787)
+            </p>
+          </div>
+          <div className="flex-col justify-start items-start gap-3.5 flex">
+            <div className="flex-col justify-start items-start gap-3 flex">
+              <h6 className="text-black text-2xl font-medium font-roobert capitalize">
+                Logo
+              </h6>
+              <p className="text-black text-xl font-normal font-neumontreal w-96">
+                Groove's logo is simple but meaningful. It features an abstract
+                design inspired by sound wave patterns, similar to the way music
+                creates patterns when it vibrates on a surface. The logo shows
+                how Groove brings together different types of music and its
+                community of music lovers.
+              </p>
+            </div>
+            <div className="flex-col w-fit flex">
+              <img width={153} src="/images/groove/groove-logo.svg" />
+              <p className="text-center text-black/75 text-sm font-normal font-departure mt-2">
+                Groove’s Logo
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div className="flex-col justify-start items-start gap-3 inline-flex">
+            <h6 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
+              Mascots
+            </h6>
+            <p className="text-black text-xl font-normal font-neuemontreal">
+              Utilizing the playful aspect of round shapes and colours. These
+              Mascots help guide users through the experience, becoming their
+              friend for the long journey that lies ahead.
+            </p>
+          </div>
+          <div className="flex flex-row justify-between gap-y-12 flex-wrap">
+            <div>
+              <img width={242} src="/images/groove/retrobetsy.gif" />
+              <p className="w-[244px] text-center text-black/75 text-2xl font-semibold font-roobert">
+                Retro Betsy
+              </p>
+            </div>
+            <div>
+              <img width={242} src="/images/groove/chill_jill.gif" />
+              <p className="w-[244px] text-center text-black/75 text-2xl font-semibold font-roobert">
+                Chill Jill
+              </p>
+            </div>
+            <div>
+              <img width={242} src="/images/groove/bluesy_judy.gif" />
+              <p className="w-[244px] text-center text-black/75 text-2xl font-semibold font-roobert">
+                Bluesy Judy
+              </p>
+            </div>
+            <div>
+              <img width={242} src="/images/groove/boombox_brody.gif" />
+              <p className="w-[244px] text-center text-black/75 text-2xl font-semibold font-roobert">
+                Boombox Brody
+              </p>
+            </div>
+            <div>
+              <img width={242} src="/images/groove/boppy_poppy.gif" />
+              <p className="w-[244px] text-center text-black/75 text-2xl font-semibold font-roobert">
+                Boppy Poppy
+              </p>
+            </div>
+            <div>
+              <img width={242} src="/images/groove/twangy_tanner.gif" />
+              <p className="w-[244px] text-center text-black/75 text-2xl font-semibold font-roobert">
+                Twangy Tanner
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div className="flex-col justify-start items-center gap-[18px] inline-flex">
+            <h4 className=" text-center text-black text-[32px] font-medium font-roobert">
+              Notable explorations in design
+            </h4>
+            <p className=" text-center text-black text-xl font-normal font-neuemontreal">
+              After a comprehensive usability test of our high-fidelity
+              prototype for the music review platform, the aim of was to gather
+              actionable feedback to enhance user experience and optimize
+              platform functionality.
+            </p>
+          </div>
+          <div className="flex-row justify-between items-center gap-6 mt-6 flex">
+            <div className="w-[455px]">
+              <h6 className=" text-black text-2xl font-medium font-roobert">
+                Background Readability
+              </h6>
+              <p className="text-black text-xl font-normal font-neuemontreal">
+                The readability of the Tunebox welcome screen was improved by
+                adjusting the background opacity and text contrast.
+                <br />
+                <br />
+                These changes enhanced overall accessibility and user
+                experience.
+              </p>
+            </div>
+            <ImgComparisonSlider>
+              <figure slot="first" class="before">
+                <img width="100%" src="/images/groove/groove-before-img.png" />
+                <figcaption className="bg-[#FBF8F8] p-4 text-center text-black/75 text-sm w-full font-departure">
+                  before
+                </figcaption>
+              </figure>
+              <figure slot="second" class="after">
+                <img slot="second" src="/images/groove/groove-after-img.png" />
+                <figcaption className="text-[#2e3452] p-4 text-center text-black/75 text-sm w-full font-departure">
+                  after
+                </figcaption>
+              </figure>
+            </ImgComparisonSlider>
+          </div>
+        </section>
+
+        <section>
+          <div className="flex-col justify-start items-start gap-16 inline-flex">
+            <div className=" flex-col justify-start items-start gap-3 flex">
+              <h1 className=" text-justify text-black text-2xl font-medium font-roobert capitalize">
+                Learnings and future plans
+              </h1>
+              <p className=" text-black text-xl font-normal  font-neuemontreal">
+                During Groove's development, I discovered that understanding
+                user preferences was crucial for delivering personalized
+                experiences. The analysis of listening habits and user feedback
+                helped create a more tailored music discovery system.
+                <br />
+                <br />I also learned that the key to user engagement lies in
+                striking the right balance between simplicity and robust
+                features, ensuring the platform remains approachable.
+              </p>
+            </div>
+            <div className="">
+              <p class="text-black text-xl font-normal font-neuemontreal">
+                Groove has developed alongside my growth as a designer, but
+                there is still more to be desired.
+                <br />
+                <br />
+                For example, I’d love to explore:
+                <br />
+              </p>
+              <ul class="pl-10 text-black text-xl list-disc font-neuemontreal">
+                <li>
+                  Implementing advanced AI recommendations based on listening
+                  habits and mood
+                </li>
+                <li>
+                  Expanding social features to include group playlists and
+                  collaborative reviews.
+                </li>
+                <li>
+                  Enhancing personalization with user-specific music insights
+                  and activity-based suggestions.
+                </li>
+                <li>
+                  Integrating cross-platform support for seamless music
+                  discovery across devices.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="flex-col justify-center items-center flex gap-3 mb-[200px]">
+          <img
+            className="w-[74px] h-[74px]"
+            src="/images/groove/retrobetsy.gif"
+          />
+          <h1 className="text-center text-black text-7xl font-roobert">
+            Thank you!
+          </h1>
+          <div className="text-center ">
+            <p class="text-black/60 text-2xl font-normal font-neuemontreal">
+              If you’re interested in the process. <br />
+              Feel free to look through the{" "}
+              <Link
+                href="https://www.figma.com/design/0UYNoXyVzwVE2tRTtKMEFf/groove-(old)?node-id=183-262&t=itQ0Fgu1L2fvQXdB-1"
+                className="text-black/60 text-2xl font-normal font-neuemontreal underline"
+              >
+                Figma file
+              </Link>{" "}
+              :)
+            </p>
+          </div>
+        </section>
       </div>
       <Footer />
     </>

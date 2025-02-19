@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 
 const AsciiArt = () => {
   const asciiArt = `     
@@ -48,51 +48,34 @@ const AsciiArt = () => {
                                                  04                                                    
 `;
 
-  const [hoverPosition, setHoverPosition] = useState({ x: -1000, y: -1000 });
+  const [hoverPosition, setHoverPosition] = useState({ x: -100, y: -100 });
   const containerRef = useRef(null);
-  const [dimensions, setDimensions] = useState({ charWidth: 0, charHeight: 0 });
-
-  useEffect(() => {
-    if (containerRef.current) {
-      const testSpan = document.createElement('span');
-      testSpan.style.fontFamily = 'monospace';
-      testSpan.style.fontSize = '12px';
-      testSpan.textContent = '0';
-      document.body.appendChild(testSpan);
-      
-      const rect = testSpan.getBoundingClientRect();
-      setDimensions({
-        charWidth: rect.width,
-        charHeight: rect.height
-      });
-      
-      document.body.removeChild(testSpan);
-    }
-  }, []);
 
   const handleMouseMove = (e) => {
     if (!containerRef.current) return;
-    
+
     const rect = containerRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    
+
     setHoverPosition({ x, y });
   };
 
   const handleMouseLeave = () => {
-    setHoverPosition({ x: -1000, y: -1000 });
+    setHoverPosition({ x: -100, y: -100 });
   };
 
   const renderAsciiArt = () => {
-    const radius = 50;
+    const radius = 80;
+    const charWidth = 8; 
+    const charHeight = 12;
     const lines = asciiArt.split("\n");
 
     return lines.map((line, row) => (
-      <div key={row} style={{ height: `${dimensions.charHeight}px`, lineHeight: `${dimensions.charHeight}px` }}>
-        {line.split("").map((char, col) => {
-          const charCenterX = col * dimensions.charWidth + dimensions.charWidth / 2;
-          const charCenterY = row * dimensions.charHeight + dimensions.charHeight / 2;
+      <div key={row} style={{ display: "block" }}>
+        {line.split("" ).map((char, col) => {
+          const charCenterX = col * charWidth + charWidth / 2;
+          const charCenterY = row * charHeight + charHeight / 2;
 
           const dx = charCenterX - hoverPosition.x;
           const dy = charCenterY - hoverPosition.y;
@@ -104,14 +87,10 @@ const AsciiArt = () => {
             <span
               key={col}
               style={{
-                display: 'inline-block',
-                width: `${dimensions.charWidth}px`,
                 fontWeight: isWithinRadius ? "bold" : "normal",
                 fontStyle: isWithinRadius ? "italic" : "normal",
                 color: isWithinRadius ? "#DB0032" : "black",
-                color: isWithinRadius ? "#DB0032" : "black",
-                fontStyle: isWithinRadius ? "italic" : "normal",
-                transition: "color 0.2s ease-out",
+                transition: "color 0.4s ease-in-out",
               }}
             >
               {char}
@@ -123,13 +102,10 @@ const AsciiArt = () => {
   };
 
   return (
-    <div 
+    <div
       className="select-none"
       ref={containerRef}
-      style={{ 
-        position: "relative",
-        display: "inline-block",
-      }}
+      style={{ position: "relative", display: "inline-block" }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -138,6 +114,7 @@ const AsciiArt = () => {
           fontFamily: "monospace",
           whiteSpace: "pre",
           fontSize: "12px",
+          lineHeight: "12px",
         }}
       >
         {renderAsciiArt()}

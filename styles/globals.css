@@ -8,7 +8,13 @@
     --font-roobert: 'Roobert', sans-serif;
     background-image: url('/images/background.png');
     background-repeat: repeat;
+    cursor: crosshair;
 }
+
+body {
+  cursor: crosshair;
+}
+
 
 /* DepartureMono */
 @font-face {
