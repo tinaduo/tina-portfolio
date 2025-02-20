@@ -6,8 +6,20 @@ import HeaderWrapper from "@/components/HeaderWrapper";
 import project from "@/data/project.json";
 import Link from "next/link";
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
+import Stack from "@/components/Stack";
 
 const Groove = () => {
+  const images = [
+    {
+      id: 1,
+      img: "/images/groove/chladni_1.png",
+    },
+    {
+      id: 2,
+      img: "/images/groove/chladni_2.png",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -210,27 +222,33 @@ const Groove = () => {
         <section className="flex-row justify-between items-start gap-3 flex">
           <div className="flex-col justify-start items-start gap-3.5 flex">
             <div className="flex flex-row justify-between gap-6">
-              <img className="w-[242px]" src="/images/groove/chladni_1.png" />
-              <img className="w-[242px]" src="/images/groove/chladni_2.png" />
+              <Stack
+                randomRotation={true}
+                sensitivity={180}
+                sendToBackOnClick={true}
+                cardDimensions={{ width: 400, height: 500 }}
+                cardsData={images}
+              />
             </div>
-            <p className="text-center text-black/75 text-sm w-full font-departure">
+            <p className="text-center text-black/75 text-sm w-full font-departure mt-4">
               Chladni Figures (1787)
             </p>
           </div>
           <div className="flex-col justify-start items-start gap-3.5 flex">
-            <div className="flex-col justify-start items-start gap-3 flex">
+            <div className="flex-col justify-start items-start gap-3 flex ml-16">
               <h6 className="text-black text-2xl font-medium font-roobert capitalize">
                 Logo
               </h6>
-              <p className="text-black text-xl font-normal font-neumontreal w-96">
-                Groove's logo is simple but meaningful. It features an abstract
-                design inspired by sound wave patterns, similar to the way music
-                creates patterns when it vibrates on a surface. The logo shows
-                how Groove brings together different types of music and its
-                community of music lovers.
+              <p className="text-black text-xl font-normal font-neumontreal">
+                Groove's logo features a simple yet meaningful abstract design
+                inspired by sound wave patterns and Chladni Figures from 1787.
+                Like vibrating music creating patterns on surfaces, the logo
+                visualizes how sound waves move through materials. Its flowing
+                lines represent the dynamic nature of music while symbolizing
+                how Groove connects different musical genres and communities.
               </p>
             </div>
-            <div className="flex-col w-fit flex">
+            <div className="flex-col w-fit flex ml-16">
               <img width={153} src="/images/groove/groove-logo.svg" />
               <p className="text-center text-black/75 text-sm font-normal font-departure mt-2">
                 Groove’s Logo
@@ -250,7 +268,7 @@ const Groove = () => {
               friend for the long journey that lies ahead.
             </p>
           </div>
-          <div className="flex flex-row justify-between gap-y-12 flex-wrap">
+          <div className="grid grid-cols-3 grid-rows-2 justify-between gap-y-12 flex-wrap">
             <div>
               <img width={242} src="/images/groove/retrobetsy.gif" />
               <p className="w-[244px] text-center text-black/75 text-2xl font-semibold font-roobert">

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import HeaderWrapper from "@/components/HeaderWrapper";
 import project from "@/data/project.json";
 import FlipCard from "@/components/FlipCard";
+import ChatBubble from "@/components/ChatBubble";
 
 const Harmony = () => {
   return (
@@ -32,7 +33,7 @@ const Harmony = () => {
           minutes={project.minutes}
         />
       ))}
-      <div className="flex flex-col justify-center items-center font-neuemontreal text-xl">
+      <div className="flex flex-col justify-center items-center font-neuemontreal text-xl gap-[164px]">
         <div className="max-w-6xl mx-auto p-6">
           <section className="mb-[164px]">
             <h2 className="text-2xl font-medium font-roobert capitalize ">
@@ -91,7 +92,7 @@ const Harmony = () => {
             <img className="w-[350px]" src="/images/harmony/harmony-1.png" />
           </section>
 
-          <section className="">
+          <section className="flex flex-col gap-2">
             <h2 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
               Research
             </h2>
@@ -101,11 +102,33 @@ const Harmony = () => {
             <p>
               Through conducting over 12 interviews with caregivers, we
               identified several critical pain points. Our research revealed
-              that caregivers from underrepresented communities often face...
+              that caregivers from different communities often face..
             </p>
-            <section className="flex flex-row my-8">
-              <div className="flex flex-row items-end">
-
+            <section className="flex flex-col gap-12 my-8">
+              <ChatBubble
+                number={1}
+                message="80% of caregivers experienced emotional stress or felt overwhelmed by the weight of their caregiving duties."
+                isRight={false}
+              />
+              <ChatBubble
+                number={2}
+                message="60% of caregivers struggled with navigating the healthcare system and coordinating medical appointments."
+                isRight={true}
+              />
+              <ChatBubble
+                number={3}
+                message="70% of caregivers reported challenges in managing their time and maintaining a healthy work-life balance."
+                isRight={false}
+              />
+              <div className="flex flex-row justify-between items-center gap-3.5">
+                <p>
+                  Interviews with 12 caregivers highlighted three main
+                  challenges: time management, communication issues, and
+                  emotional strain, especially for those balancing multiple
+                  responsibilities. The findings underscored the need for better
+                  scheduling, communication, and collaboration tools to support
+                  caregivers.
+                </p>
               </div>
             </section>
 
@@ -131,19 +154,6 @@ const Harmony = () => {
                 solutions.
               </p>
             </section>
-            <h3 className="text-4xl font-medium font-roobert mt-8">
-              Insights from Research
-            </h3>
-            <ul className="list-disc pl-5">
-              <li>
-                80% of caregivers reported experiencing significant emotional
-                stress.
-              </li>
-              <li>
-                Caregivers aged 35-65 struggle to balance caregiving with
-                personal life demands.
-              </li>
-            </ul>
             <iframe
               className="mt-8"
               width="800"
@@ -229,101 +239,25 @@ const Harmony = () => {
             </section>
           </section>
 
-          <section class="mb-16">
-            <h2 className="text-4xl font-medium font-roobert">Logo Design</h2>
-            <p className="mt-2">
-              The Harmony logo draws inspiration from the fluid, interconnected
-              movements of jellyfish. Much like these sea creatures, the logo
-              embodies flexibility, fluidity, and community — key values of the
-              Harmony app.
-            </p>
-            <div className="flex flex-row w-full mt-2">
-              <div className="flex flex-row bg-[#7859EA] w-full h-fit p-8 items-center justify-center">
-                <svg
-                  width="221"
-                  height="164"
-                  viewBox="0 0 221 164"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M158.776 61.3583H200.017C211.237 61.3583 220.313 70.2873 220.313 81.326C220.313 92.3647 211.237 101.294 200.017 101.294H157.28V143.339C157.28 154.377 148.204 163.307 136.984 163.307H136.884C125.664 163.307 116.588 154.377 116.588 143.339V102.618L64.0273 157.076C60.1875 161.05 54.8517 163.307 49.3163 163.307H47.172C29.3692 163.307 20.1935 142.358 32.4111 129.602L59.639 101.245H20.393C9.17274 101.245 0.0968018 92.3156 0.0968018 81.277C0.0968018 70.2383 9.17274 61.3092 20.393 61.3092H62.5313V20.0001C62.5313 8.96141 71.6072 0.0323486 82.8275 0.0323486H82.9272C94.1475 0.0323486 103.223 8.96141 103.223 20.0001V58.3656L156.532 5.87058C160.322 2.14196 165.508 0.0323486 170.894 0.0323486H171.792C189.844 0.0323486 198.92 21.4228 186.253 34.0315L158.826 61.3092L158.776 61.3583Z"
-                    fill="#FCFCFC"
-                  />
-                </svg>
-              </div>
-              <div className="flex flex-row bg-[#1E1E1E] w-full h-fit p-8 items-center justify-center">
-                <svg
-                  width="221"
-                  height="164"
-                  viewBox="0 0 221 164"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M158.776 61.3583H200.017C211.237 61.3583 220.313 70.2873 220.313 81.326C220.313 92.3647 211.237 101.294 200.017 101.294H157.28V143.339C157.28 154.377 148.204 163.307 136.984 163.307H136.884C125.664 163.307 116.588 154.377 116.588 143.339V102.618L64.0273 157.076C60.1875 161.05 54.8517 163.307 49.3163 163.307H47.172C29.3692 163.307 20.1935 142.358 32.4111 129.602L59.639 101.245H20.393C9.17274 101.245 0.0968018 92.3156 0.0968018 81.277C0.0968018 70.2383 9.17274 61.3092 20.393 61.3092H62.5313V20.0001C62.5313 8.96141 71.6072 0.0323486 82.8275 0.0323486H82.9272C94.1475 0.0323486 103.223 8.96141 103.223 20.0001V58.3656L156.532 5.87058C160.322 2.14196 165.508 0.0323486 170.894 0.0323486H171.792C189.844 0.0323486 198.92 21.4228 186.253 34.0315L158.826 61.3092L158.776 61.3583Z"
-                    fill="#FCFCFC"
-                  />
-                </svg>
-              </div>
-              <div className="flex flex-row w-full h-fit p-8 items-center justify-center bg-[#FCFCFC]">
-                <svg
-                  width="221"
-                  height="164"
-                  viewBox="0 0 221 164"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_1915_3021)">
-                    <path
-                      d="M158.776 61.6888H200.017C211.237 61.6888 220.313 70.6179 220.313 81.6565C220.313 92.6952 211.237 101.624 200.017 101.624H157.28V143.669C157.28 154.708 148.204 163.637 136.984 163.637H136.884C125.664 163.637 116.588 154.708 116.588 143.669V102.949L64.0273 157.406C60.1875 161.38 54.8517 163.637 49.3163 163.637H47.172C29.3692 163.637 20.1935 142.688 32.4111 129.932L59.639 101.575H20.393C9.17274 101.575 0.0968018 92.6461 0.0968018 81.6075C0.0968018 70.5688 9.17274 61.6397 20.393 61.6397H62.5313V20.3306C62.5313 9.29192 71.6072 0.362862 82.8275 0.362862H82.9272C94.1475 0.362862 103.223 9.29192 103.223 20.3306V58.6961L156.532 6.20109C160.322 2.47247 165.508 0.362862 170.894 0.362862H171.792C189.844 0.362862 198.92 21.7534 186.253 34.362L158.826 61.6397L158.776 61.6888Z"
-                      fill="#1E1E1E"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1915_3021">
-                      <rect
-                        width="220.266"
-                        height="163.274"
-                        fill="white"
-                        transform="translate(0.0968018 0.362862)"
-                      />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-            </div>
-          </section>
-
-          <section className="mb-[164px]">
-            <h2 className="text-4xl font-medium font-roobert mt-8">
-              Colour Palette
-            </h2>
-            <p className="mt-2">
-              The <strong>primary purple</strong>, inspired by the hues of
-              jellyfish, represents calm and balance.
-            </p>
-            <div className="flex flex-row mt-2">
-              <div className="w-full h-20 bg-[#7859EA]"></div>
-              <div className="w-full h-20 bg-[#937AEE]"></div>
-              <div className="w-full h-20 bg-[#AE9BF2]"></div>
-            </div>
-            <p className="mt-8">
-              The <strong>secondary palette</strong> symbolizes the diversity of
-              caregiving experiences, from the warmth of reds and pinks to the
-              optimism of greens and yellows.
-            </p>
-            <div className="flex flex-row mt-2">
-              <div className="w-full h-20  bg-[#FE7258]" />
-              <div className="w-full h-20  bg-[#5B0E00]" />
-              <div className="w-full h-20  bg-[#FE83B0]" />
-              <div className="w-full h-20  bg-[#761739]" />
-              <div className="w-full h-20  bg-[#F7D844]" />
-              <div className="w-full h-20  bg-[#4E412B]" />
-              <div className="w-full h-20  bg-[#6FC94F]" />
-              <div className="w-full h-20  bg-[#19370E]" />
-              <div className="w-full h-20  bg-[#7F99DD]" />
-              <div className="w-full h-20  bg-[#091E54]" />
+          <section className="my-[164px]">
+            <div className="flex-col justify-start items-start gap-3.5 flex">
+              <h6 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
+                Creating the Brand
+              </h6>
+              <h1 className="text-black text-[32px] font-medium font-roobert">
+                A Caring Approach
+              </h1>
+              <p className="text-black text-xl font-normal font-neuemontreal">
+                Harmony’s branding reflects community, connection, and care,
+                inspired by the fluidity of jellyfish to symbolize community and
+                care. A purple palette promotes balance, while diverse secondary
+                colors represent caregiving experiences. Clean typography
+                ensures clarity and accessibility. The empathetic tone fosters
+                connection, with subtle cultural influences enhancing
+                relatability. Harmony prioritizes simplicity and thoughtful
+                caregiving, creating an intuitive, supportive experience.
+              </p>
+              <img src="/images/harmony/harmony_styleguide.png" />
             </div>
           </section>
 
@@ -418,77 +352,82 @@ const Harmony = () => {
           </section>
         </div>
 
-        <section className="mb-8">
-          <img className="w-screen h-44" src="/images/black_fadein.png"></img>
-          <div className="flex flex-row justify-center items-center h-screen w-screen bg-gradient-to-b from-[#1d1e23] to-[#18191c] text-white">
-            <div className="flex flex-col gap-12 pr-24">
-              <div className="flex flex-col justify-center items-center gap-3">
-                <h1 className="text-center text-5xl font-medium font-roobert capitalize">
-                  Final Prototype
-                </h1>
-                <p className="text-center text-xl font-normal opacity-70">
-                  Caregiving made simple with Harmony.
-                </p>
-              </div>
-              <div className="flex gap-4 justify-between items-center">
-                <div className="flex items-center gap-3.5">
-                  <div data-svg-wrapper className="relative">
-                    <svg
-                      width="24"
-                      height="25"
-                      viewBox="0 0 24 25"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.574 19.4017L12.636 15.4637L11.433 16.6657C10.203 17.8977 9.587 18.5127 8.925 18.3677C8.263 18.2227 7.962 17.4047 7.36 15.7717L5.353 10.3217C4.152 7.06265 3.55 5.43365 4.39 4.59365C5.23 3.75365 6.86 4.35365 10.12 5.55565L15.57 7.56165C17.203 8.16365 18.02 8.46465 18.166 9.12665C18.312 9.78865 17.696 10.4037 16.464 11.6347L15.262 12.8377L19.2 16.7757C19.608 17.1837 19.812 17.3877 19.906 17.6157C20.031 17.9187 20.031 18.2587 19.906 18.5627C19.812 18.7897 19.608 18.9937 19.2 19.4017C18.792 19.8097 18.588 20.0137 18.36 20.1077C18.0568 20.2329 17.7162 20.2329 17.413 20.1077C17.186 20.0137 16.983 19.8097 16.574 19.4017Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-center text-sm font-normal font-departure lowercase">
-                    to navigate prototype
+      {/* final prototype section */}
+          <section className="mb-8">
+            <img className="w-screen h-44" src="/images/black_fadein.png"></img>
+            <div className="flex flex-row justify-center items-center h-screen w-screen bg-gradient-to-b from-[#1d1e23] to-[#18191c] text-white">
+              <div className="flex flex-col gap-12 pr-24">
+                <div className="flex flex-col justify-center items-center gap-3">
+                  <h1 className="text-center text-5xl font-medium font-roobert capitalize">
+                    Final Prototype
+                  </h1>
+                  <p className="text-center text-xl font-normal opacity-70">
+                    Caregiving made simple with Harmony.
                   </p>
                 </div>
-                <div className="flex items-center gap-3.5">
-                  <div data-svg-wrapper>
-                    <svg
-                      width="28"
-                      height="29"
-                      viewBox="0 0 28 29"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        x="0.5"
-                        y="0.701172"
-                        width="27"
-                        height="27"
-                        rx="3.5"
-                        stroke="white"
-                      />
-                      <path
-                        d="M16.01 14.4712C16.86 14.9312 17.325 15.7212 17.405 16.8412L17.585 19.4512H16.355L16.175 16.9162C16.145 16.3962 15.975 15.9762 15.665 15.6562C15.355 15.3362 14.955 15.1762 14.465 15.1762H11.615V19.4512H10.34V8.95117H14.315C15.345 8.95117 16.16 9.23617 16.76 9.80617C17.36 10.3662 17.66 11.1062 17.66 12.0262C17.66 13.1362 17.11 13.9512 16.01 14.4712ZM11.615 10.0912V14.0212H14.315C15.005 14.0212 15.515 13.8312 15.845 13.4512C16.175 13.0712 16.34 12.5962 16.34 12.0262C16.34 11.4562 16.175 10.9912 15.845 10.6312C15.515 10.2712 15.005 10.0912 14.315 10.0912H11.615Z"
-                        fill="white"
-                      />
-                    </svg>
+                <div className="flex gap-4 justify-between items-center">
+                  <div className="flex items-center gap-3.5">
+                    <div data-svg-wrapper className="relative">
+                      <svg
+                        width="24"
+                        height="25"
+                        viewBox="0 0 24 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16.574 19.4017L12.636 15.4637L11.433 16.6657C10.203 17.8977 9.587 18.5127 8.925 18.3677C8.263 18.2227 7.962 17.4047 7.36 15.7717L5.353 10.3217C4.152 7.06265 3.55 5.43365 4.39 4.59365C5.23 3.75365 6.86 4.35365 10.12 5.55565L15.57 7.56165C17.203 8.16365 18.02 8.46465 18.166 9.12665C18.312 9.78865 17.696 10.4037 16.464 11.6347L15.262 12.8377L19.2 16.7757C19.608 17.1837 19.812 17.3877 19.906 17.6157C20.031 17.9187 20.031 18.2587 19.906 18.5627C19.812 18.7897 19.608 18.9937 19.2 19.4017C18.792 19.8097 18.588 20.0137 18.36 20.1077C18.0568 20.2329 17.7162 20.2329 17.413 20.1077C17.186 20.0137 16.983 19.8097 16.574 19.4017Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <p className="text-center text-sm font-normal font-departure lowercase">
+                      to navigate prototype
+                    </p>
                   </div>
-                  <p className="text-center text-sm font-normal font-departure lowercase">
-                    To Restart
-                  </p>
+                  <div className="flex items-center gap-3.5">
+                    <div data-svg-wrapper>
+                      <svg
+                        width="28"
+                        height="29"
+                        viewBox="0 0 28 29"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="0.5"
+                          y="0.701172"
+                          width="27"
+                          height="27"
+                          rx="3.5"
+                          stroke="white"
+                        />
+                        <path
+                          d="M16.01 14.4712C16.86 14.9312 17.325 15.7212 17.405 16.8412L17.585 19.4512H16.355L16.175 16.9162C16.145 16.3962 15.975 15.9762 15.665 15.6562C15.355 15.3362 14.955 15.1762 14.465 15.1762H11.615V19.4512H10.34V8.95117H14.315C15.345 8.95117 16.16 9.23617 16.76 9.80617C17.36 10.3662 17.66 11.1062 17.66 12.0262C17.66 13.1362 17.11 13.9512 16.01 14.4712ZM11.615 10.0912V14.0212H14.315C15.005 14.0212 15.515 13.8312 15.845 13.4512C16.175 13.0712 16.34 12.5962 16.34 12.0262C16.34 11.4562 16.175 10.9912 15.845 10.6312C15.515 10.2712 15.005 10.0912 14.315 10.0912H11.615Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <p className="text-center text-sm font-normal font-departure lowercase">
+                      To Restart
+                    </p>
+                  </div>
                 </div>
               </div>
+              <iframe
+                width="500"
+                height="800"
+                src="https://embed.figma.com/proto/dRQ3ywleMzjy15UK4yIC9W/harmony-design?page-id=1981%3A6447&node-id=1981-6740&p=f&viewport=541%2C2174%2C0.17&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1981%3A6766&show-proto-sidebar=1&embed-host=share&hide-ui=1"
+              ></iframe>
             </div>
-            <iframe
-              width="800"
-              height="800"
-              src="https://embed.figma.com/proto/dRQ3ywleMzjy15UK4yIC9W/harmony-design?page-id=1981%3A6447&node-id=1981-6740&p=f&viewport=541%2C2174%2C0.17&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1981%3A6766&show-proto-sidebar=1&embed-host=share&hide-ui=1"
-            ></iframe>
-          </div>
-          <img className="w-screen h-48" src="/images/black_fadeout.png"></img>
-        </section>
+            <img
+              className="w-screen h-48"
+              src="/images/black_fadeout.png"
+            ></img>
+          </section>
 
-        <div className="max-w-6xl mx-auto p-6">
+
+        <div className="flex flex-col max-w-6xl mx-auto p-6 gap-[164px]">
           <section className="mt-16">
             <h2 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
               Learnings and Future Directions
@@ -531,7 +470,7 @@ const Harmony = () => {
             </ul>
           </section>
 
-          <section className="my-[164px] flex flex-col items-center">
+          <section className="flex flex-col items-center mb-[164px]">
             <img
               className="mix-blend-darken w-[74px] h-[74px]"
               src="/images/harmony/harmony-mascot.gif"
@@ -550,6 +489,7 @@ const Harmony = () => {
               </a>
             </p>
           </section>
+
         </div>
       </div>
       <Footer />
