@@ -96,7 +96,7 @@ export default function Stack({
             sensitivity={sensitivity}
           >
             <motion.div
-              className="rounded-2xl overflow-hidden border-4 border-gray-200 shadow-md"
+              className="rounded-2xl overflow-hidden border-2 border-gray-200 shadow-md"
               onClick={() => sendToBackOnClick && sendToBack(card.id)}
               animate={{
                 rotateZ: (cards.length - index - 1) * 4 + randomRotate,

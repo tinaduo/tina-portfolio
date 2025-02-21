@@ -6,8 +6,22 @@ import HeaderWrapper from "@/components/HeaderWrapper";
 import project from "@/data/project.json";
 import FlipCard from "@/components/FlipCard";
 import ChatBubble from "@/components/ChatBubble";
+import BounceCards from "@/components/BounceCards";
 
 const Harmony = () => {
+  const images = [
+    "/images/harmony/maria-persona.png",
+    "/images/harmony/david-persona.png",
+  ];
+
+  const transformStyles = [
+    "rotate(5deg) translate(-150px)",
+    "rotate(0deg) translate(-70px)",
+    "rotate(-5deg)",
+    "rotate(5deg) translate(70px)",
+    "rotate(-5deg) translate(150px)",
+  ];
+
   return (
     <>
       <Head>
@@ -63,11 +77,15 @@ const Harmony = () => {
               challenge
             </h2>
             <p className="text-4xl">
-              <strong className="mr-2">How can we</strong>help
-              <strong className="mx-2">caregivers</strong>provide
-              <strong className="mx-2">consistent, high-quality care</strong>
+              <strong className="font-medium">How can we</strong> help
+              <strong className="font-medium"> caregivers</strong> provide
+              <strong className="font-medium">
+                {" "}
+                consistent, high-quality care
+              </strong>{" "}
               while
-              <strong className="mx-2">
+              <strong className="font-medium">
+                {" "}
                 reducing stress and preventing burnout?
               </strong>
             </p>
@@ -93,43 +111,90 @@ const Harmony = () => {
           </section>
 
           <section className="flex flex-col gap-2">
-            <h2 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
+            <h2 className="text-black text-2xl font-medium font-roobert capitalize">
               Research
             </h2>
             <h3 className="text-4xl font-medium font-roobert">
               Understanding the problem
             </h3>
             <p>
-              Through conducting over 12 interviews with caregivers, we
-              identified several critical pain points. Our research revealed
-              that caregivers from different communities often face..
+              Through conducted 12 interviews to gather insights from caregivers
+              on the challenges they face, how they manage caregiving tasks, and
+              their goals for improving their caregiving routines and overall
+              well-being.
             </p>
-            <section className="flex flex-col gap-12 my-8">
-              <ChatBubble
-                number={1}
-                message="80% of caregivers experienced emotional stress or felt overwhelmed by the weight of their caregiving duties."
-                isRight={false}
-              />
-              <ChatBubble
-                number={2}
-                message="60% of caregivers struggled with navigating the healthcare system and coordinating medical appointments."
-                isRight={true}
-              />
-              <ChatBubble
-                number={3}
-                message="70% of caregivers reported challenges in managing their time and maintaining a healthy work-life balance."
-                isRight={false}
-              />
-              <div className="flex flex-row justify-between items-center gap-3.5">
+
+            <section className="flex flex-col">
+              <h4 className="text-black text-2xl font-medium font-roobert mt-16 mb-12">
+                Several key patterns emerged from my research that shaped the
+                project's direction:
+              </h4>
+              <div className="flex flex-col gap-24">
+                <div className="flex flex-col gap-3.5">
+                  <ChatBubble
+                    className="my-14"
+                    number={1}
+                    message="80% of caregivers experienced emotional stress or felt overwhelmed by the weight of their caregiving duties."
+                    isRight={false}
+                  />
+                  <p className="ml-6 mr-24 text-black/75 text-sm font-departure">
+                    A large majority of caregivers reported feeling overwhelmed
+                    by the emotional demands of caregiving, especially when
+                    balancing medical needs with other life commitments.
+                  </p>
+                </div>
+                <div className="flex flex-col justify-end gap-3.5">
+                  <ChatBubble
+                    number={2}
+                    message="60% of caregivers struggled with navigating the healthcare system and coordinating medical appointments."
+                    isRight={true}
+                  />
+                  <p className="mr-6 ml-24 text-black/75 text-sm font-departure">
+                    Caregivers struggled to navigate the healthcare system, from
+                    scheduling appointments to communicating with medical
+                    professionals. This added complexity made it harder to
+                    provide effective care.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3.5">
+                  <ChatBubble
+                    number={3}
+                    message="70% of caregivers reported challenges in managing their time and maintaining a healthy work-life balance."
+                    isRight={false}
+                  />
+                  <p className="ml-6 mr-24 text-black/75 text-sm font-departure">
+                    Caregivers struggled to balance caregiving duties with work
+                    and personal life, leading to stress and burnout.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row justify-between items-center mt-20">
                 <p>
-                  Interviews with 12 caregivers highlighted three main
-                  challenges: time management, communication issues, and
-                  emotional strain, especially for those balancing multiple
-                  responsibilities. The findings underscored the need for better
-                  scheduling, communication, and collaboration tools to support
-                  caregivers.
+                  Interviews with caregivers revealed three key challenges:
+                  <strong className="font-medium">
+                    {" "}
+                    emotional strain, time management struggles, and
+                    communication breakdowns.
+                  </strong>{" "}
+                  Many felt overwhelmed by the emotional demands of caregiving,
+                  struggled to balance their responsibilities with work and
+                  personal life, and faced difficulties navigating the
+                  healthcare system. These insights highlight the urgent need
+                  for better scheduling, communication, and collaboration tools.
                 </p>
               </div>
+              <h3 className="text-4xl font-medium font-roobert mt-8">
+                Design Solutions
+              </h3>
+              <ul className="list-disc pl-5">
+                <li>AI-Powered scheduling & Task management tools.</li>
+                <li>Streamlined task management to reduce cognitive load.</li>
+                <li>
+                  Collaborative tools to enhance family support systems and
+                  communication.
+                </li>
+              </ul>
+
             </section>
 
             <section className="flex flex-col gap-3.5 my-28">
@@ -154,37 +219,6 @@ const Harmony = () => {
                 solutions.
               </p>
             </section>
-            <iframe
-              className="mt-8"
-              width="800"
-              height="450"
-              src="https://embed.figma.com/board/zuFBo2GuM3mMUGwCXVwylr/harmony-user-flow-and-user-story-map?node-id=0-1&embed-host=share&hide-ui=1"
-              allowfullscreen
-            ></iframe>
-            <h3 className="text-4xl font-medium font-roobert mt-8">
-              Design Solutions
-            </h3>
-            <ul className="list-disc pl-5">
-              <li>Streamlined task management to reduce cognitive load.</li>
-              <li>
-                Collaborative tools to enhance family support systems and
-                communication.
-              </li>
-            </ul>
-          </section>
-
-          <section className="my-[164px]">
-            <h2 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
-              Design Process
-            </h2>
-            <h3 className="text-4xl font-medium font-roobert my-2">
-              Crafting an Intuitive Experience
-            </h3>
-            <p className="mb-8">
-              The design focused on simplicity, ensuring that first-time users
-              could easily discover the core features while maintaining a clean
-              and intuitive interface.
-            </p>
 
             <h3 className="text-4xl font-medium font-roobert mt-8">
               Wireframes
@@ -275,10 +309,10 @@ const Harmony = () => {
             </div>
             <div className="flex-col justify-end items-center gap-6 inline-flex mb-4">
               <img className="w-fit" src="/images/harmony/image 8.png" />
-              <div className="text-center text-black/75 text-sm font-normal font-departure">
+              <p className="text-center text-black/75 text-sm font-normal font-departure">
                 Brainstorming different business cards designs unique layouts
                 and shapes.
-              </div>
+              </p>
             </div>
 
             <div className="justify-between items-center flex my-28">
@@ -352,80 +386,76 @@ const Harmony = () => {
           </section>
         </div>
 
-      {/* final prototype section */}
-          <section className="mb-8">
-            <img className="w-screen h-44" src="/images/black_fadein.png"></img>
-            <div className="flex flex-row justify-center items-center h-screen w-screen bg-gradient-to-b from-[#1d1e23] to-[#18191c] text-white">
-              <div className="flex flex-col gap-12 pr-24">
-                <div className="flex flex-col justify-center items-center gap-3">
-                  <h1 className="text-center text-5xl font-medium font-roobert capitalize">
-                    Final Prototype
-                  </h1>
-                  <p className="text-center text-xl font-normal opacity-70">
-                    Caregiving made simple with Harmony.
+        {/* final prototype section */}
+        <section className="mb-8">
+          <img className="w-screen h-44" src="/images/black_fadein.png"></img>
+          <div className="flex flex-row justify-center items-center h-screen w-screen bg-gradient-to-b from-[#1d1e23] to-[#18191c] text-white">
+            <div className="flex flex-col gap-12 pr-24">
+              <div className="flex flex-col justify-center items-center gap-3">
+                <h1 className="text-center text-5xl font-medium font-roobert capitalize">
+                  Final Prototype
+                </h1>
+                <p className="text-center text-xl font-normal opacity-70">
+                  Caregiving made simple with Harmony.
+                </p>
+              </div>
+              <div className="flex gap-4 justify-between items-center">
+                <div className="flex items-center gap-3.5">
+                  <div data-svg-wrapper className="relative">
+                    <svg
+                      width="24"
+                      height="25"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.574 19.4017L12.636 15.4637L11.433 16.6657C10.203 17.8977 9.587 18.5127 8.925 18.3677C8.263 18.2227 7.962 17.4047 7.36 15.7717L5.353 10.3217C4.152 7.06265 3.55 5.43365 4.39 4.59365C5.23 3.75365 6.86 4.35365 10.12 5.55565L15.57 7.56165C17.203 8.16365 18.02 8.46465 18.166 9.12665C18.312 9.78865 17.696 10.4037 16.464 11.6347L15.262 12.8377L19.2 16.7757C19.608 17.1837 19.812 17.3877 19.906 17.6157C20.031 17.9187 20.031 18.2587 19.906 18.5627C19.812 18.7897 19.608 18.9937 19.2 19.4017C18.792 19.8097 18.588 20.0137 18.36 20.1077C18.0568 20.2329 17.7162 20.2329 17.413 20.1077C17.186 20.0137 16.983 19.8097 16.574 19.4017Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
+                  <p className="text-center text-sm font-normal font-departure lowercase">
+                    to navigate prototype
                   </p>
                 </div>
-                <div className="flex gap-4 justify-between items-center">
-                  <div className="flex items-center gap-3.5">
-                    <div data-svg-wrapper className="relative">
-                      <svg
-                        width="24"
-                        height="25"
-                        viewBox="0 0 24 25"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M16.574 19.4017L12.636 15.4637L11.433 16.6657C10.203 17.8977 9.587 18.5127 8.925 18.3677C8.263 18.2227 7.962 17.4047 7.36 15.7717L5.353 10.3217C4.152 7.06265 3.55 5.43365 4.39 4.59365C5.23 3.75365 6.86 4.35365 10.12 5.55565L15.57 7.56165C17.203 8.16365 18.02 8.46465 18.166 9.12665C18.312 9.78865 17.696 10.4037 16.464 11.6347L15.262 12.8377L19.2 16.7757C19.608 17.1837 19.812 17.3877 19.906 17.6157C20.031 17.9187 20.031 18.2587 19.906 18.5627C19.812 18.7897 19.608 18.9937 19.2 19.4017C18.792 19.8097 18.588 20.0137 18.36 20.1077C18.0568 20.2329 17.7162 20.2329 17.413 20.1077C17.186 20.0137 16.983 19.8097 16.574 19.4017Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-center text-sm font-normal font-departure lowercase">
-                      to navigate prototype
-                    </p>
+                <div className="flex items-center gap-3.5">
+                  <div data-svg-wrapper>
+                    <svg
+                      width="28"
+                      height="29"
+                      viewBox="0 0 28 29"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="0.5"
+                        y="0.701172"
+                        width="27"
+                        height="27"
+                        rx="3.5"
+                        stroke="white"
+                      />
+                      <path
+                        d="M16.01 14.4712C16.86 14.9312 17.325 15.7212 17.405 16.8412L17.585 19.4512H16.355L16.175 16.9162C16.145 16.3962 15.975 15.9762 15.665 15.6562C15.355 15.3362 14.955 15.1762 14.465 15.1762H11.615V19.4512H10.34V8.95117H14.315C15.345 8.95117 16.16 9.23617 16.76 9.80617C17.36 10.3662 17.66 11.1062 17.66 12.0262C17.66 13.1362 17.11 13.9512 16.01 14.4712ZM11.615 10.0912V14.0212H14.315C15.005 14.0212 15.515 13.8312 15.845 13.4512C16.175 13.0712 16.34 12.5962 16.34 12.0262C16.34 11.4562 16.175 10.9912 15.845 10.6312C15.515 10.2712 15.005 10.0912 14.315 10.0912H11.615Z"
+                        fill="white"
+                      />
+                    </svg>
                   </div>
-                  <div className="flex items-center gap-3.5">
-                    <div data-svg-wrapper>
-                      <svg
-                        width="28"
-                        height="29"
-                        viewBox="0 0 28 29"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <rect
-                          x="0.5"
-                          y="0.701172"
-                          width="27"
-                          height="27"
-                          rx="3.5"
-                          stroke="white"
-                        />
-                        <path
-                          d="M16.01 14.4712C16.86 14.9312 17.325 15.7212 17.405 16.8412L17.585 19.4512H16.355L16.175 16.9162C16.145 16.3962 15.975 15.9762 15.665 15.6562C15.355 15.3362 14.955 15.1762 14.465 15.1762H11.615V19.4512H10.34V8.95117H14.315C15.345 8.95117 16.16 9.23617 16.76 9.80617C17.36 10.3662 17.66 11.1062 17.66 12.0262C17.66 13.1362 17.11 13.9512 16.01 14.4712ZM11.615 10.0912V14.0212H14.315C15.005 14.0212 15.515 13.8312 15.845 13.4512C16.175 13.0712 16.34 12.5962 16.34 12.0262C16.34 11.4562 16.175 10.9912 15.845 10.6312C15.515 10.2712 15.005 10.0912 14.315 10.0912H11.615Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-center text-sm font-normal font-departure lowercase">
-                      To Restart
-                    </p>
-                  </div>
+                  <p className="text-center text-sm font-normal font-departure lowercase">
+                    To Restart
+                  </p>
                 </div>
               </div>
-              <iframe
-                width="500"
-                height="800"
-                src="https://embed.figma.com/proto/dRQ3ywleMzjy15UK4yIC9W/harmony-design?page-id=1981%3A6447&node-id=1981-6740&p=f&viewport=541%2C2174%2C0.17&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1981%3A6766&show-proto-sidebar=1&embed-host=share&hide-ui=1"
-              ></iframe>
             </div>
-            <img
-              className="w-screen h-48"
-              src="/images/black_fadeout.png"
-            ></img>
-          </section>
-
+            <iframe
+              width="500"
+              height="800"
+              src="https://embed.figma.com/proto/dRQ3ywleMzjy15UK4yIC9W/harmony-design?page-id=1981%3A6447&node-id=1981-6740&p=f&viewport=541%2C2174%2C0.17&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1981%3A6766&show-proto-sidebar=1&embed-host=share&hide-ui=1"
+            ></iframe>
+          </div>
+          <img className="w-screen h-48" src="/images/black_fadeout.png"></img>
+        </section>
 
         <div className="flex flex-col max-w-6xl mx-auto p-6 gap-[164px]">
           <section className="mt-16">
@@ -489,7 +519,6 @@ const Harmony = () => {
               </a>
             </p>
           </section>
-
         </div>
       </div>
       <Footer />
