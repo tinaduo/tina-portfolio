@@ -297,15 +297,15 @@ const Harmony = () => {
 
           <section className="mb-8 flex flex-col justify-center items-center">
             <div className="justify-start items-start gap-3.5">
-              <div className="text-4xl font-medium font-roobert mb-2">
+              <h4 className="text-4xl font-medium font-roobert mb-2">
                 Harmony Promotional Materials Designs
-              </div>
-              <div className="text-black text-xl font-normal mb-2">
+              </h4>
+              <p className="text-black text-xl font-normal mb-2">
                 The focus was creating promotional materials that reflect the
                 app’s mission of fostering care and connection. The process
                 began with brainstorming to determine layouts that would best
                 convey Harmony’s values.
-              </div>
+              </p>
             </div>
             <div className="flex-col justify-end items-center gap-6 inline-flex mb-4">
               <img className="w-fit" src="/images/harmony/image 8.png" />

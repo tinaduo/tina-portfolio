@@ -15,6 +15,9 @@ export default {
       cursor: {
         view: "url(/images/view-cursor.svg) 41 19, auto",
       },
+      animation: {
+        'slow-spin': 'spin 5s linear infinite',
+      },
     },
   },
   plugins: [],

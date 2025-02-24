@@ -249,8 +249,8 @@ const Groove = () => {
               </p>
             </div>
             <div className="flex-col w-fit flex ml-16">
-              <img width={153} src="/images/groove/groove-logo.svg" />
-              <p className="text-center text-black/75 text-sm font-normal font-departure mt-2">
+              <img width={153} className="hover:animate-slow-spin" src="/images/groove/groove-logo.svg" />
+              <p className="text-center text-black/75 text-sm font-normal font-departure mt-4">
                 Groove’s Logo
               </p>
             </div>
@@ -334,7 +334,7 @@ const Groove = () => {
                 experience.
               </p>
             </div>
-            <ImgComparisonSlider>
+            <ImgComparisonSlider className="outline-none">
               <figure slot="first" class="before">
                 <img width="100%" src="/images/groove/groove-before-img.png" />
                 <figcaption className="bg-[#FBF8F8] p-4 text-center text-black/75 text-sm w-full font-departure">

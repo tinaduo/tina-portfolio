@@ -1,6 +1,5 @@
 import React from "react";
 import Tag from "./Tag";
-import TableOfContent from "./TableofContent";
 
 const noinfo = "not available";
 
@@ -26,9 +25,9 @@ const HeaderWrapper = ({
       </p>
       <div className="flex items-center gap-6 mb-10">
         <Tag text={tags || noinfo} />
-        <p className="text-[#3b3d41]/50 text-medium font-roobert">
+        {/* <p className="text-[#3b3d41]/50 text-medium font-roobert">
           {minutes || noinfo} minutes
-        </p>
+        </p> */}
       </div>
       <div className="w-[784px] justify-between items-start inline-flex">
         <div className="max-w-[163px] flex-col justify-start items-start gap-2 inline-flex">

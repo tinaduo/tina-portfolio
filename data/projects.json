@@ -23,6 +23,14 @@
             "date": "Jan - May 2024",
             "src": "/images/groove/groove-cover-img.jpg",
             "page": "/projects/groove"
+        },
+        {
+            "name": "Harmony Landing Page",
+            "description": "One of Harmony’s promotional assets for the Annual Student Design & Technology Innovation Showcase.",
+            "tags": ["Web Design"],
+            "date": "Nov - Dec 2024",
+            "src": "/images/harmony/harmony-landing-cover-img.jpg",
+            "page": "/projects/harmony-landing-page"
         }
     ]
 }

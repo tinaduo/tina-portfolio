@@ -25,7 +25,7 @@ const ProjectWrapper = ({ name, description, tags, date, page, src }) => {
       <div className="overflow-hidden relative group">
         <a href={page} className="cursor-view block">
           <img
-            className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 origin-center"
+            className="w-[855px] h-auto object-cover transition-transform duration-300 group-hover:scale-105 origin-center"
             src={src || fallback}
             alt={name || "Project image"}
           />
