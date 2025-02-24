@@ -1,11 +1,36 @@
+import { useState } from 'react';
+
 const AsciiCatArt = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const normalCat = `
+            
+      ＿＿＿＿
+    /  ||￣￣||   ∧＿∧
+   |...||＿＿|| （    ）
+   |￣￣＼三⊂/￣￣￣￣￣/
+   |　　　|/　       /
+  `;
+
+  const happyCat = `
+back to top?
+      ＿＿＿＿
+    /  ||￣￣||  ∧＿∧ 
+   |...||＿＿||（＾ω＾)
+   |￣￣＼三⊂/￣￣￣￣￣/
+   |　　　|/　       /
+  `;
+
   return (
-    <pre className="font-mono text-lg whitespace-pre select-none transition-transform duration-300 hover:-translate-y-10 cursor-pointer">
-      {`      |\      _,,,---,,_
-ZZZzz /,\`.-'\`'    -.  ;-;;,_
-     |,4-  ) )-,_. ,\ (  \`'-'
-    '---''(_/--'  \`-\_) `}
-    </pre>
+    <div className="font-mono text-lg p-4">
+      <pre 
+        className="whitespace-pre select-none transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {isHovered ? happyCat : normalCat }
+      </pre>
+    </div>
   );
 };
 

@@ -13,7 +13,7 @@ export default {
         roobert: 'var(--font-roobert)',
       },
       cursor: {
-        'view': 'url(/images/view-cursor.svg), auto',
+        view: "url(/images/view-cursor.svg) 41 19, auto",
       },
     },
   },

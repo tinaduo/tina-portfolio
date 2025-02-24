@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const AsciiArt = () => {
   const asciiArt = `     
@@ -48,8 +48,19 @@ const AsciiArt = () => {
                                                  04                                                    
 `;
 
-  const [hoverPosition, setHoverPosition] = useState({ x: -100, y: -100 });
+  const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
+  const [charSize, setCharSize] = useState({ width: 8, height: 12 });
   const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const span = containerRef.current.querySelector("span");
+    if (span) {
+      const { width, height } = span.getBoundingClientRect();
+      setCharSize({ width, height });
+    }
+  }, [asciiArt]);
 
   const handleMouseMove = (e) => {
     if (!containerRef.current) return;
@@ -62,20 +73,22 @@ const AsciiArt = () => {
   };
 
   const handleMouseLeave = () => {
-    setHoverPosition({ x: -100, y: -100 });
+    setHoverPosition({ x: 0, y: 0 });
   };
 
   const renderAsciiArt = () => {
     const radius = 80;
-    const charWidth = 8; 
-    const charHeight = 12;
     const lines = asciiArt.split("\n");
 
     return lines.map((line, row) => (
       <div key={row} style={{ display: "block" }}>
-        {line.split("" ).map((char, col) => {
-          const charCenterX = col * charWidth + charWidth / 2;
-          const charCenterY = row * charHeight + charHeight / 2;
+        {line.split("").map((char, col) => {
+          const charCenterX = Math.round(
+            col * charSize.width + charSize.width / 2
+          );
+          const charCenterY = Math.round(
+            row * charSize.height + charSize.height / 2
+          );
 
           const dx = charCenterX - hoverPosition.x;
           const dy = charCenterY - hoverPosition.y;
@@ -91,6 +104,7 @@ const AsciiArt = () => {
                 fontStyle: isWithinRadius ? "italic" : "normal",
                 color: isWithinRadius ? "#DB0032" : "black",
                 transition: "color 0.4s ease-in-out",
+                display: "inline-block",
               }}
             >
               {char}
@@ -105,22 +119,20 @@ const AsciiArt = () => {
     <div
       className="select-none"
       ref={containerRef}
-      style={{ position: "relative", display: "inline-block" }}
+      style={{
+        position: "relative",
+        display: "inline-block",
+        fontFamily: "monospace",
+        whiteSpace: "pre",
+        fontSize: "12px",
+        letterSpacing: "0px",
+        lineHeight: "12px",
+      }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      <div
-        style={{
-          fontFamily: "monospace",
-          whiteSpace: "pre",
-          fontSize: "12px",
-          lineHeight: "12px",
-        }}
-      >
-        {renderAsciiArt()}
-      </div>
+      {renderAsciiArt()}
     </div>
   );
 };
-
 export default AsciiArt;

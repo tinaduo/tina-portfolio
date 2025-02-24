@@ -16,17 +16,14 @@ const NavBar = () => {
   const handleWorkClick = (e) => {
     e.preventDefault();
     
-    // If we're not on the home page, first navigate to home
     if (router.pathname !== '/') {
       router.push('/').then(() => {
-        // After navigation, scroll to work section
         const element = document.getElementById("work-section");
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }
       });
     } else {
-      // If already on home page, just scroll
       const element = document.getElementById("work-section");
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
@@ -35,29 +32,29 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="flex flex-row justify-center py-14 gap-4 z-10">
-      <a className="text-center text-2xl font-roobert hover:underline" href="/">
+    <nav className="flex flex-row justify-center py-6 sm:py-10 md:py-14 gap-2 sm:gap-3 md:gap-4 px-3 sm:px-4 overflow-x-auto">
+      <a className="text-center text-lg sm:text-xl md:text-2xl whitespace-nowrap font-roobert hover:underline" href="/">
         home
       </a>
-      <span className="text-center text-2xl font-roobert"> / </span>
+      <span className="text-center text-lg sm:text-xl md:text-2xl font-roobert"> / </span>
       <a 
-        className="text-center text-2xl font-roobert hover:underline"
+        className="text-center text-lg sm:text-xl md:text-2xl whitespace-nowrap font-roobert hover:underline"
         href="/#work-section" 
         onClick={handleWorkClick}
       >
         work
       </a>
-      <span className="text-center text-2xl font-roobert"> / </span>
+      <span className="text-center text-lg sm:text-xl md:text-2xl font-roobert"> / </span>
       {navLinks.map((link, index) => (
         <React.Fragment key={index}>
           <a
-            className="text-center text-2xl font-roobert hover:underline"
+            className="text-center text-lg sm:text-xl md:text-2xl whitespace-nowrap font-roobert hover:underline"
             href={link.href}
           >
             {link.label}
           </a>
           {index < navLinks.length - 1 && (
-            <span className="text-center text-2xl font-roobert"> / </span>
+            <span className="text-center text-lg sm:text-xl md:text-2xl font-roobert"> / </span>
           )}
         </React.Fragment>
       ))}

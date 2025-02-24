@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --font-departure: 'DepartureMono', monospace;
-    --font-neuemontreal: 'NeueMontreal', sans-serif;
-    --font-roobert: 'Roobert', sans-serif;
-    background-image: url('/images/background.png');
-    background-repeat: repeat;
-    cursor: crosshair;
-}
-
 html,
 body {
   margin: 0;
@@ -26,6 +17,14 @@ body {
   height: 100%;
 }
 
+:root {
+    --font-departure: 'DepartureMono', monospace;
+    --font-neuemontreal: 'NeueMontreal', sans-serif;
+    --font-roobert: 'Roobert', sans-serif;
+    background-image: url('/images/background.png');
+    background-repeat: repeat;
+    cursor: crosshair;
+}
 
 /* DepartureMono */
 @font-face {
