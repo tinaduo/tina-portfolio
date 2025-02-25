@@ -31,7 +31,7 @@ const HeaderWrapper = ({
           {minutes || noinfo} minutes
         </p> */}
       </div>
-      <div className="flex flex-col sm:flex-row gap-28 w-full lg:w-full">
+      <div className="flex flex-col sm:flex-row gap-12 sm:gap-28 w-full lg:w-full">
         <div className="flex-col justify-start items-start gap-1 md:gap-2 flex">
           <h6 className="text-black text-lg md:text-xl font-medium font-roobert">
             Role
