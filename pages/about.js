@@ -2,6 +2,7 @@ import NavBar from "@/components/NavBar";
 import React from "react";
 import Head from "next/head";
 import Footer from "@/components/Footer";
+import LivePhoto from "@/components/LivePhoto";
 
 const About = () => {
   return (
@@ -12,7 +13,17 @@ const About = () => {
       </Head>
       <NavBar />
       <div className="flex flex-row gap-20 justify-start mx-[120px] mt-[100px] mb-28">
-        <img className="w-[455px] h-[455px]" src="/images/monkey-dancing.gif" />
+        <section>
+          <LivePhoto
+            imageUrl="/images/IMG_3620.jpeg"
+            videoUrl="/images/IMG_3620.mov"
+            width={450}
+            height={450}
+          />
+          <p className="font-departure text-center text-black/80 text-sm font-normal mt-4">
+            hover me ^^
+          </p>
+        </section>
         <div className="flex flex-col gap-9">
           <div className="lol">
             <h6 className="text-justify text-[#939396] text-2xl font-normal font-departure uppercase">
@@ -44,17 +55,17 @@ const About = () => {
               approach to design: accessibility and user-centered thinking come
               first. I thrive on crafting experiences that simplify complex
               processes, ensuring that no one feels left out in the digital
-              world. 
+              world.
               <br />
               <br />
-              Beyond design, I find inspiration in culture, storytelling,
-              and human connections. Whether it’s through my work or everyday
+              Beyond design, I find inspiration in culture, storytelling, and
+              human connections. Whether it’s through my work or everyday
               conversations, I love uncovering what makes people tick and
               translating that into impactful digital solutions.
             </p>
           </div>
 
-          <div className="flex-col justify-start items-start gap-4 flex">
+          {/* <div className="flex-col justify-start items-start gap-4 flex">
             <h1 className="text-justify text-black text-3xl font-normal font-roobert">
               2 things that's not on my resume but worth mentioning.
             </h1>
@@ -78,18 +89,17 @@ const About = () => {
               luctus enim egestas, ac scelerisque ante pulvinar. Donec ut
               rhoncus ex.
             </p>
-          </div>
+          </div> */}
 
           <div className="flex-col justify-start items-start gap-4 flex">
             <h1 className="text-justify text-black text-3xl font-normal font-roobert">
               My current favourites.
             </h1>
             <ul className="list-disc text-[#3b3d41] text-xl font-medium font-neuemontreal ml-4">
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
+              <li>Books: Battle Royale Remastered</li>
+              <li>Max Monkey</li>
+              <li>Tina Monkey</li>
+              <li>Fish Tofu</li>
             </ul>
           </div>
         </div>

@@ -22,7 +22,7 @@ back to top?
   `;
 
   return (
-    <div className="font-mono text-lg p-4">
+    <div className="font-mono text-lg">
       <pre 
         className="whitespace-pre select-none transition-all duration-300 hover:-translate-y-2 cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}

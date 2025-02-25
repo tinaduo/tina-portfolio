@@ -9,7 +9,7 @@ export default function FlipCard() {
     return (
         <div className="flex items-center justify-center">
             <div
-                className="relative w-80 [perspective:1000px] hover:[perspective:1200px]"
+                className="relative w-80 [perspective:1000px] hover:[perspective:1200px] shadow-2xl"
                 onClick={() => setIsFlipped(!isFlipped)}
             >
                 <div

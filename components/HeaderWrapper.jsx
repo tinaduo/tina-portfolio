@@ -1,5 +1,6 @@
 import React from "react";
 import Tag from "./Tag";
+import Link from "next/link";
 
 const noinfo = "not available";
 
@@ -13,8 +14,9 @@ const HeaderWrapper = ({
   endDate,
   year,
   minutes,
+  figmaLink,
+  liveLink,
 }) => {
-  
   return (
     <div className="h-[348px] mx-20">
       <h1 className=" text-black text-[64px] font-roobert capitalize pb-3">
@@ -61,6 +63,21 @@ const HeaderWrapper = ({
           <p className="text-justify text-[#939396] text-xl font-normal font-neuemontreal">
             {startDate || noinfo} → {endDate || noinfo} {year || noinfo}
           </p>
+        </div>
+        <div className="flex-col justify-start items-start gap-2 flex max-w-[163px]">
+          <h6 className=" text-justify text-black text-xl font-medium font-roobert">
+            Links
+          </h6>
+          <Link 
+            href={figmaLink || "www.figma.com"} 
+            className="text-justify text-[#939396] text-xl font-normal font-neuemontreal hover:underline">
+              Figma↗
+          </Link>
+          <Link 
+            href={liveLink || "www.figma.com"} 
+            className="text-justify text-[#939396] text-xl font-normal font-neuemontreal hover:underline">
+              Live↗
+          </Link>
         </div>
       </div>
     </div>

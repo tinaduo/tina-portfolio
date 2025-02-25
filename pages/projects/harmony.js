@@ -6,7 +6,13 @@ import HeaderWrapper from "@/components/HeaderWrapper";
 import project from "@/data/project.json";
 import FlipCard from "@/components/FlipCard";
 import ChatBubble from "@/components/ChatBubble";
-import BounceCards from "@/components/BounceCards";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Harmony = () => {
   const images = [
@@ -194,7 +200,6 @@ const Harmony = () => {
                   communication.
                 </li>
               </ul>
-
             </section>
 
             <section className="flex flex-col gap-3.5 my-28">
@@ -220,11 +225,33 @@ const Harmony = () => {
               </p>
             </section>
 
-            <h3 className="text-4xl font-medium font-roobert mt-8">
-              Wireframes
-            </h3>
+            <section className="flex flex-col gap-3.5">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {images.map((src, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <img src={src} alt={`Image ${index + 1}`} />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </section>
 
             <section className="flex flex-col gap-3.5 mb-8">
+              <h2 className="text-black text-2xl font-medium font-roobert capitalize">
+                Design
+              </h2>
+              <h3 className="text-4xl font-medium font-roobert">Wireframes</h3>
               <div className="flex flex-row justify-between items-center gap-3.5">
                 <img
                   className="w-[200px]"
@@ -279,7 +306,7 @@ const Harmony = () => {
                 Creating the Brand
               </h6>
               <h1 className="text-black text-[32px] font-medium font-roobert">
-                A Caring Approach
+                Harmony Branding
               </h1>
               <p className="text-black text-xl font-normal font-neuemontreal">
                 Harmony’s branding reflects community, connection, and care,

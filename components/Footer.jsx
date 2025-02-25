@@ -40,7 +40,7 @@ const Footer = () => {
             <AsciiCatArt />
           </div>
           <h3 className="text-[#939396] text-sm font-medium font-neuemontreal">
-            ©{currentYear} Tina Duong
+            © {currentYear} Tina Duong
           </h3>
         </div>
       </div>
