@@ -3,6 +3,7 @@ import React from "react";
 import Head from "next/head";
 import Footer from "@/components/Footer";
 import LivePhoto from "@/components/LivePhoto";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -14,6 +15,16 @@ const About = () => {
       <NavBar />
       <div className="flex flex-row gap-20 justify-start mx-[120px] mt-[100px] mb-28">
         <section>
+          <motion.img
+            src="/images/stickers/capybara.png"
+            alt="me"
+            className="absolute left-24 top-56 w-[150px] z-10 object-cover cursor-grab rotate-6"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            whileTap={{ scale: 1.1, rotate: 15 }}
+            drag
+            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+
+          />
           <LivePhoto
             imageUrl="/images/IMG_3620.jpeg"
             videoUrl="/images/IMG_3620.mov"
