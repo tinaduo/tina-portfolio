@@ -53,51 +53,20 @@ const Harmony = () => {
           minutes={project.minutes}
         />
       ))}
+        <section className="mb-8">
+          <img className="w-screen h-44" src="/images/black_fadein.png"></img>
+          <div className="flex flex-row justify-center items-center h-screen w-screen bg-gradient-to-b from-[#1d1e23] to-[#18191c] text-white">
+            <section className="flex flex-col justify-center gap-3.5">
+              <p className="text-center text-xl font-normal">
+                Caregiving often requires balancing a wide range of responsibilities
+              </p>
+            </section>
+          </div>
+          <img className="w-screen h-48" src="/images/black_fadeout.png"></img>
+        </section>
+
       <div className="flex flex-col justify-center items-center font-neuemontreal text-xl gap-[164px]">
         <div className="max-w-6xl mx-auto p-6">
-          <section className="mb-[164px]">
-            <h2 className="text-2xl font-medium font-roobert capitalize ">
-              Introduction
-            </h2>
-            <p>
-              Caregiving often requires balancing a wide range of
-              responsibilities, including:
-            </p>
-            <ul className="list-disc pl-5">
-              <li>Managing medication schedules</li>
-              <li>Coordinating doctor’s appointments</li>
-              <li>Keeping the whole family informed</li>
-            </ul>
-            <br />
-            <p className="mb-8">
-              All of this while striving to maintain personal well-being. For
-              more than <strong>five million Canadians</strong>, this daily
-              challenge is particularly pronounced in underrepresented
-              communities, where resources are limited and support networks can
-              feel distant or out of reach.
-            </p>
-          </section>
-
-          <section className="my-[164px]">
-            <h2 className="text-justify text-[#db0132] text-2xl font-medium font-roobert uppercase">
-              challenge
-            </h2>
-            <p className="text-4xl">
-              <strong className="font-medium">How can we</strong> help
-              <strong className="font-medium"> caregivers</strong> provide
-              <strong className="font-medium">
-                {" "}
-                consistent, high-quality care
-              </strong>{" "}
-              while
-              <strong className="font-medium">
-                {" "}
-                reducing stress and preventing burnout?
-              </strong>
-            </p>
-          </section>
-          <br />
-
           <section className="mb-8 flex flex-row justify-between items-center">
             <div className="gap-3.5 flex flex-col justify-start">
               <h2 className="text-2xl font-medium font-roobert capitalize">

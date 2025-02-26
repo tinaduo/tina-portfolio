@@ -16,11 +16,11 @@ const About = () => {
       <div className="flex flex-row gap-20 justify-start mx-[120px] mt-[100px] mb-28">
         <section>
           <motion.img
-            src="/images/stickers/capybara.png"
-            alt="me"
-            className="absolute left-24 top-56 w-[150px] z-10 object-cover cursor-grab rotate-6"
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            whileTap={{ scale: 1.1, rotate: 15 }}
+            src="/images/stickers/maxmonkey.png"
+            alt="max monkey sticker"
+            className="absolute left-[40rem] top-[45rem] w-[150px] z-10 object-cover cursor-grab"
+            whileHover={{ scale: 1.1, rotate: 15 }}
+            whileTap={{ scale: 1.1, rotate: 10 }}
             drag
             dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
 
@@ -108,9 +108,9 @@ const About = () => {
             </h1>
             <ul className="list-disc text-[#3b3d41] text-xl font-medium font-neuemontreal ml-4">
               <li>Books: Battle Royale Remastered</li>
-              <li>Max Monkey</li>
-              <li>Tina Monkey</li>
-              <li>Fish Tofu</li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
           </div>
         </div>
