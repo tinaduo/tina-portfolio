@@ -100,7 +100,7 @@ const About = () => {
               luctus enim egestas, ac scelerisque ante pulvinar. Donec ut
               rhoncus ex.
             </p>
-          </div> */}
+          </div>
 
           <div className="flex-col justify-start items-start gap-4 flex">
             <h1 className="text-justify text-black text-3xl font-normal font-roobert">
@@ -108,11 +108,10 @@ const About = () => {
             </h1>
             <ul className="list-disc text-[#3b3d41] text-xl font-medium font-neuemontreal ml-4">
               <li>Books: Battle Royale Remastered</li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>Food: Cánh Gà Chiên Nước Mắm and ICE CREAMM!!!</li>
+              <li>Shows: Abbott Elementary</li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
 

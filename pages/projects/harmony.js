@@ -13,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import TableofContents from "@/components/TableofContents";
 
 const Harmony = () => {
   const images = [
@@ -20,12 +21,13 @@ const Harmony = () => {
     "/images/harmony/david-persona.png",
   ];
 
-  const transformStyles = [
-    "rotate(5deg) translate(-150px)",
-    "rotate(0deg) translate(-70px)",
-    "rotate(-5deg)",
-    "rotate(5deg) translate(70px)",
-    "rotate(-5deg) translate(150px)",
+  const sections = [
+    { id: "intro", title: "Introduction" },
+    { id: "solution", title: "Solution" },
+    { id: "research", title: "Research" },
+    { id: "design", title: "Design" },
+    { id: "prototype", title: "Prototype" },
+    { id: "conclusion", title: "Conclusion" },
   ];
 
   return (
@@ -35,6 +37,7 @@ const Harmony = () => {
         <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
       </Head>
       <NavBar />
+      <TableofContents className="mix-blend-exclusion" sections={sections} />
       <img
         className="w-screen h-[538px] object-cover"
         src="/images/harmony/harmony-hero-img.jpg"
@@ -51,42 +54,135 @@ const Harmony = () => {
           endDate={project.endDate}
           year={project.year}
           minutes={project.minutes}
+          figmaLink={project.figmaLink}
+          liveLink={project.liveLink}
         />
       ))}
-        <section className="mb-8">
-          <img className="w-screen h-44" src="/images/black_fadein.png"></img>
-          <div className="flex flex-row justify-center items-center h-screen w-screen bg-gradient-to-b from-[#1d1e23] to-[#18191c] text-white">
-            <section className="flex flex-col justify-center gap-3.5">
-              <p className="text-center text-xl font-normal">
-                Caregiving often requires balancing a wide range of responsibilities
+      <section className="mb-8 text-xl">
+        <img className="w-screen h-44" src="/images/black_fadein.png"></img>
+        <div className="flex flex-col justify-center items-center h-screen w-screen bg-gradient-to-b from-[#1d1e23] to-[#18191c] text-white">
+          <div className="flex flex-col max-w-6xl mx-auto">
+            <section className="flex flex-col gap-3.5">
+              <h2
+                id="intro"
+                className="text-2xl font-medium font-roobert capitalize "
+              >
+                Introduction
+              </h2>
+              <p>
+                Caregiving often requires balancing a wide range of
+                responsibilities, including:
+              </p>
+              <ul className="list-disc pl-5">
+                <li>Managing medication schedules</li>
+                <li>Coordinating doctor’s appointments</li>
+                <li>Keeping the whole family informed</li>
+              </ul>
+              <br />
+              <p className="mb-8">
+                All of this while striving to maintain personal well-being. For
+                more than <strong>five million Canadians</strong>, this daily
+                challenge is particularly pronounced in underrepresented
+                communities, where resources are limited and support networks
+                can feel distant or out of reach.
+              </p>
+            </section>
+
+            <section className="my-[164px]">
+              <h2 className="text-justify text-[#db0132] text-2xl font-medium font-roobert uppercase">
+                challenge
+              </h2>
+              <p className="text-4xl">
+                <strong className="font-medium">How can we</strong> help
+                <strong className="font-medium"> caregivers</strong> provide
+                <strong className="font-medium">
+                  {" "}
+                  consistent, high-quality care
+                </strong>{" "}
+                while
+                <strong className="font-medium">
+                  {" "}
+                  reducing stress and preventing burnout?
+                </strong>
               </p>
             </section>
           </div>
-          <img className="w-screen h-48" src="/images/black_fadeout.png"></img>
-        </section>
+        </div>
+        <img className="w-screen h-48" src="/images/black_fadeout.png"></img>
+      </section>
 
       <div className="flex flex-col justify-center items-center font-neuemontreal text-xl gap-[164px]">
         <div className="max-w-6xl mx-auto p-6">
-          <section className="mb-8 flex flex-row justify-between items-center">
-            <div className="gap-3.5 flex flex-col justify-start">
-              <h2 className="text-2xl font-medium font-roobert capitalize">
-                Solution
-              </h2>
-              <h3 className="text-4xl font-medium font-roobert">
-                Simplifying Caregiving with Harmony
-              </h3>
-              <p className="w-[450px]">
-                Harmony is a web app designed to reduce the overwhelm caregivers
-                face. With AI-powered tools and collaborative features. The app
-                helps ensure high-quality care tailored to the unique needs of
-                loved ones, reducing stress and supporting balance.
-              </p>
-            </div>
-            <img className="w-[350px]" src="/images/harmony/harmony-1.png" />
+          <section className="flex flex-col">
+            <section className="mb-8 flex justify-between items-center">
+              <div className="gap-3.5 flex flex-col justify-start">
+                <h2
+                  id="solution"
+                  className="text-2xl font-medium font-roobert capitalize"
+                >
+                  Solution
+                </h2>
+                <h3 className="text-4xl font-medium font-roobert">
+                  Simplifying Caregiving with Harmony
+                </h3>
+                <p className="w-[450px]">
+                  Harmony is a web app designed to reduce the overwhelm
+                  caregivers face. With AI-powered tools and collaborative
+                  features. The app helps ensure high-quality care tailored to
+                  the unique needs of loved ones, reducing stress and supporting
+                  balance.
+                </p>
+              </div>
+              <img className="w-[350px]" src="/images/harmony/harmony-1.png" />
+            </section>
+            <section className="flex flex-col gap-12 my-44">
+              <section className="flex flex-row items-center gap-3.5">
+                <img
+                  width={250}
+                  src="/images/harmony/screenshots/aicall.png" />
+                <div>
+                  <h3 className="text-3xl font-medium font-roobert">
+                    Harmony AI
+                  </h3>
+                  <p>
+                    An intelligent assistant that helps caregivers by providing reminders and helping them manage their loved ones' care.
+                  </p>
+                </div>
+              </section>
+              <section className="flex flex-row-reverse items-center gap-3.5">
+                <img
+                  width={250}
+                  src="/images/harmony/screenshots/calendar.png" />
+                <div>
+                  <h3 className="text-3xl font-medium font-roobert">
+                    Calendar
+                  </h3>
+                  <p>
+                    A centralized calendar that helps caregivers keep track of appointments, medication schedules, and other important events.
+                  </p>
+                </div>
+              </section>
+              <section className="flex flex-row items-center gap-3.5">
+                <img
+                  width={250}
+                  src="/images/harmony/screenshots/journal.png" />
+                <div>
+                  <h3 className="text-3xl font-medium font-roobert">
+                    Journal
+                  </h3>
+                  <p>
+                    A journal feature that allows caregivers to record important information, track progress, and share updates with family members.
+                  </p>
+                </div>
+              </section>
+            </section>
           </section>
 
           <section className="flex flex-col gap-2">
-            <h2 className="text-black text-2xl font-medium font-roobert capitalize">
+            <h2
+              id="research"
+              className="text-black text-2xl font-medium font-roobert capitalize"
+            >
               Research
             </h2>
             <h3 className="text-4xl font-medium font-roobert">
@@ -98,67 +194,69 @@ const Harmony = () => {
               their goals for improving their caregiving routines and overall
               well-being.
             </p>
+          </section>
 
-            <section className="flex flex-col">
-              <h4 className="text-black text-2xl font-medium font-roobert mt-16 mb-12">
-                Several key patterns emerged from my research that shaped the
-                project's direction:
-              </h4>
-              <div className="flex flex-col gap-24">
-                <div className="flex flex-col gap-3.5">
-                  <ChatBubble
-                    className="my-14"
-                    number={1}
-                    message="80% of caregivers experienced emotional stress or felt overwhelmed by the weight of their caregiving duties."
-                    isRight={false}
-                  />
-                  <p className="ml-6 mr-24 text-black/75 text-sm font-departure">
-                    A large majority of caregivers reported feeling overwhelmed
-                    by the emotional demands of caregiving, especially when
-                    balancing medical needs with other life commitments.
-                  </p>
-                </div>
-                <div className="flex flex-col justify-end gap-3.5">
-                  <ChatBubble
-                    number={2}
-                    message="60% of caregivers struggled with navigating the healthcare system and coordinating medical appointments."
-                    isRight={true}
-                  />
-                  <p className="mr-6 ml-24 text-black/75 text-sm font-departure">
-                    Caregivers struggled to navigate the healthcare system, from
-                    scheduling appointments to communicating with medical
-                    professionals. This added complexity made it harder to
-                    provide effective care.
-                  </p>
-                </div>
-                <div className="flex flex-col gap-3.5">
-                  <ChatBubble
-                    number={3}
-                    message="70% of caregivers reported challenges in managing their time and maintaining a healthy work-life balance."
-                    isRight={false}
-                  />
-                  <p className="ml-6 mr-24 text-black/75 text-sm font-departure">
-                    Caregivers struggled to balance caregiving duties with work
-                    and personal life, leading to stress and burnout.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-row justify-between items-center mt-20">
-                <p>
-                  Interviews with caregivers revealed three key challenges:
-                  <strong className="font-medium">
-                    {" "}
-                    emotional strain, time management struggles, and
-                    communication breakdowns.
-                  </strong>{" "}
-                  Many felt overwhelmed by the emotional demands of caregiving,
-                  struggled to balance their responsibilities with work and
-                  personal life, and faced difficulties navigating the
-                  healthcare system. These insights highlight the urgent need
-                  for better scheduling, communication, and collaboration tools.
+          <section className="flex flex-col gap-12">
+            <h4 className="text-black text-2xl font-medium font-roobert mt-16 mb-12">
+              Several key patterns emerged from my research that shaped the
+              project's direction:
+            </h4>
+            <div className="flex flex-col gap-24">
+              <div className="flex flex-col gap-3.5">
+                <ChatBubble
+                  className="my-14"
+                  number={1}
+                  message="80% of caregivers experienced emotional stress or felt overwhelmed by the weight of their caregiving duties."
+                  isRight={false}
+                />
+                <p className="ml-6 mr-24 text-black/75 text-sm font-departure">
+                  A large majority of caregivers reported feeling overwhelmed by
+                  the emotional demands of caregiving, especially when balancing
+                  medical needs with other life commitments.
                 </p>
               </div>
-              <h3 className="text-4xl font-medium font-roobert mt-8">
+              <div className="flex flex-col justify-end gap-3.5">
+                <ChatBubble
+                  number={2}
+                  message="60% of caregivers struggled with navigating the healthcare system and coordinating medical appointments."
+                  isRight={true}
+                />
+                <p className="mr-6 ml-24 text-black/75 text-sm font-departure">
+                  Caregivers struggled to navigate the healthcare system, from
+                  scheduling appointments to communicating with medical
+                  professionals. This added complexity made it harder to provide
+                  effective care.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3.5">
+                <ChatBubble
+                  number={3}
+                  message="70% of caregivers reported challenges in managing their time and maintaining a healthy work-life balance."
+                  isRight={false}
+                />
+                <p className="ml-6 mr-24 text-black/75 text-sm font-departure">
+                  Caregivers struggled to balance caregiving duties with work
+                  and personal life, leading to stress and burnout.
+                </p>
+              </div>
+            </div>
+            <section className="flex flex-row justify-between items-center gap-3.5">
+              <p>
+                Interviews with caregivers revealed three key challenges:
+                <strong className="font-medium">
+                  {" "}
+                  emotional strain, time management struggles, and communication
+                  breakdowns.
+                </strong>{" "}
+                Many felt overwhelmed by the emotional demands of caregiving,
+                struggled to balance their responsibilities with work and
+                personal life, and faced difficulties navigating the healthcare
+                system. These insights highlight the urgent need for better
+                scheduling, communication, and collaboration tools.
+              </p>
+            </section>
+            <section className="flex flex-col gap-3.5">
+              <h3 className="text-4xl font-medium font-roobert">
                 Design Solutions
               </h3>
               <ul className="list-disc pl-5">
@@ -170,31 +268,15 @@ const Harmony = () => {
                 </li>
               </ul>
             </section>
-
-            <section className="flex flex-col gap-3.5 my-28">
-              <div className="flex flex-col">
-                <h3 className="text-4xl font-medium font-roobert">
-                  Competitive Analysis
-                </h3>
-                <p>
-                  The caregiving app market is evolving to provide more than
-                  just task management, focusing on communication, health
-                  tracking, and community support. Competitors like CircleOf,
-                  CareMobi, and Ianacare each offer unique features, from secure
-                  messaging to resource sharing and privacy-focused tools.
-                </p>
-              </div>
-              <img
-                className="pt-2"
-                src="/images/harmony/COMPETITIVE_ANALYSIS.png"
-              />
-              <p className="font-departure text-center text-black/80 text-sm font-normal">
-                This analysis highlights key strengths and gaps in existing
-                solutions.
-              </p>
-            </section>
-
             <section className="flex flex-col gap-3.5">
+              <h3 className="text-4xl font-medium font-roobert">
+                User Personas
+              </h3>
+              <p>
+                These personas effectively illustrate the range of challenges
+                caregivers encounter and demonstrate the specific ways in which
+                Harmony addresses their distinct needs.
+              </p>
               <Carousel
                 opts={{
                   align: "start",
@@ -215,80 +297,42 @@ const Harmony = () => {
                 <CarouselNext />
               </Carousel>
             </section>
-
-            <section className="flex flex-col gap-3.5 mb-8">
-              <h2 className="text-black text-2xl font-medium font-roobert capitalize">
-                Design
-              </h2>
-              <h3 className="text-4xl font-medium font-roobert">Wireframes</h3>
-              <div className="flex flex-row justify-between items-center gap-3.5">
-                <img
-                  className="w-[200px]"
-                  src="/images/harmony/harmonycall-lofi.png"
-                />
-                <img
-                  className="w-[200px]"
-                  src="/images/harmony/harmonyhome-lofi.png"
-                />
-                <img
-                  className="w-[200px]"
-                  src="/images/harmony/harmonycalendar-lofi.png"
-                />
-                <img
-                  className="w-[200px]"
-                  src="/images/harmony/harmonyjournal-lofi.png"
-                />
-              </div>
-              <p className="text-center text-black/75 text-sm font-normal font-departure w-full">
-                Lofi wireframes
-              </p>
-            </section>
-
-            <section className="flex flex-col gap-3.5">
-              <div className="flex flex-row justify-between items-center gap-3.5">
-                <img
-                  className="w-[200px]"
-                  src="/images/harmony/harmonycall-hifi.png"
-                />
-                <img
-                  className="w-[200px]"
-                  src="/images/harmony/harmonyhome-hifi.png"
-                />
-                <img
-                  className="w-[200px]"
-                  src="/images/harmony/harmonycalendar-hifi.png"
-                />
-                <img
-                  className="w-[200px]"
-                  src="/images/harmony/harmonyjournal-hifi.png"
-                />
-              </div>
-              <p className="text-center text-black/75 text-sm font-normal font-departure w-full">
-                Hifi wireframes
-              </p>
-            </section>
           </section>
 
-          <section className="my-[164px]">
-            <div className="flex-col justify-start items-start gap-3.5 flex">
-              <h6 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
-                Creating the Brand
-              </h6>
-              <h1 className="text-black text-[32px] font-medium font-roobert">
-                Harmony Branding
-              </h1>
-              <p className="text-black text-xl font-normal font-neuemontreal">
-                Harmony’s branding reflects community, connection, and care,
-                inspired by the fluidity of jellyfish to symbolize community and
-                care. A purple palette promotes balance, while diverse secondary
-                colors represent caregiving experiences. Clean typography
-                ensures clarity and accessibility. The empathetic tone fosters
-                connection, with subtle cultural influences enhancing
-                relatability. Harmony prioritizes simplicity and thoughtful
-                caregiving, creating an intuitive, supportive experience.
+          <section className="flex flex-col gap-3.5 mt-[164px]">
+            <h2
+              id="design"
+              className="text-black text-2xl font-medium font-roobert capitalize"
+            >
+              Design
+            </h2>
+            <h1 className="text-black text-[32px] font-medium font-roobert">
+              Harmony Branding
+            </h1>
+            <p className="text-black text-xl font-normal font-neuemontreal">
+              Harmony’s branding reflects community, connection, and care,
+              inspired by the fluidity of jellyfish to symbolize community and
+              care. A purple palette promotes balance, while diverse secondary
+              colors represent caregiving experiences. Clean typography ensures
+              clarity and accessibility. The empathetic tone fosters connection,
+              with subtle cultural influences enhancing relatability. Harmony
+              prioritizes simplicity and thoughtful caregiving, creating an
+              intuitive, supportive experience.
+            </p>
+            <img src="/images/harmony/harmony_styleguide.png" />
+          </section>
+
+            <section className="flex flex-col gap-3.5 my-32">
+              <h3 className="text-4xl font-medium font-roobert">
+                Wireframes
+              </h3>
+              <p>
+                Wireframes were designed to ensure a user-friendly experience
+                that simplifies caregiving tasks. The layout prioritizes
+                essential features, such as the calendar and AI assistant, to
+                streamline daily routines and reduce cognitive load.
               </p>
-              <img src="/images/harmony/harmony_styleguide.png" />
-            </div>
+              <img src="/images/harmony/lofi-hifi.png" />
           </section>
 
           <section className="mb-8 flex flex-col justify-center items-center">
@@ -388,7 +432,10 @@ const Harmony = () => {
           <div className="flex flex-row justify-center items-center h-screen w-screen bg-gradient-to-b from-[#1d1e23] to-[#18191c] text-white">
             <div className="flex flex-col gap-12 pr-24">
               <div className="flex flex-col justify-center items-center gap-3">
-                <h1 className="text-center text-5xl font-medium font-roobert capitalize">
+                <h1
+                  id="prototype"
+                  className="text-center text-5xl font-medium font-roobert capitalize"
+                >
                   Final Prototype
                 </h1>
                 <p className="text-center text-xl font-normal opacity-70">
@@ -455,7 +502,10 @@ const Harmony = () => {
 
         <div className="flex flex-col max-w-6xl mx-auto p-6 gap-[164px]">
           <section className="mt-16">
-            <h2 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
+            <h2
+              id="conclusion"
+              className="text-justify text-black text-2xl font-medium font-roobert capitalize"
+            >
               Learnings and Future Directions
             </h2>
             <p>
