@@ -4,8 +4,22 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import HeaderWrapper from "@/components/HeaderWrapper";
 import project from "@/data/project.json";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const HarmonyLandingPage = () => {
+  const images = [
+    "/images/harmony/harmony-landing-ss.jpg",
+    "/images/harmony/harmony-landing-ss-2.jpg",
+    "/images/harmony/harmony-landing-ss-3.jpg",
+    "/images/harmony/harmony-landing-ss-4.jpg",
+  ];
+
   return (
     <>
       <Head>
@@ -32,9 +46,9 @@ const HarmonyLandingPage = () => {
             minutes={project.minutes}
           />
         ))}
-        <div className="flex flex-col font-neuemontreal text-xl gap-[164px]">
+        <div className="flex flex-col font-neuemontreal text-xl">
           <div className="max-w-6xl mx-auto p-6">
-            <section className="flex flex-col gap-2">
+            <section className="flex flex-col gap-3.5">
               <h2 className="text-justify text-black text-2xl font-medium font-roobert capitalize">
                 Overview
               </h2>
@@ -48,21 +62,25 @@ const HarmonyLandingPage = () => {
                 The design creates a calm, inviting atmosphere aligned with
                 Harmony's mission.
               </p>
-            </section>
-
-            <section className="grid grid-cols-2 gap-6 mt-12">
-              <img 
-                className="border border-neutral-300"
-                src="/images/harmony/harmony-landing-ss.jpg" />
-              <img 
-                className="border border-neutral-300"
-                src="/images/harmony/harmony-landing-ss-2.jpg" />
-              <img 
-                className="border border-neutral-300"
-                src="/images/harmony/harmony-landing-ss-3.jpg" />
-              <img 
-                className="border border-neutral-300"
-                src="/images/harmony/harmony-landing-ss-4.jpg" />
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {images.map((src, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <img src={src} alt={`Image ${index + 1}`} />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </section>
           </div>
 
@@ -75,19 +93,17 @@ const HarmonyLandingPage = () => {
               Thank You!
             </h1>
             <p className="text-center text-2xl">
-              If you'd like to explore the design process, feel free to check
-              out the
+              If you'd like to explore the website, feel free to check out the{" "}
               <a
-                className="pl-2 underline hover:text-[#db0132]"
-                href="https://www.figma.com/design/Es542nLZPkU8gcL9YxjsLv/Harmony-Landing-Page?node-id=362-1313&t=wJcFRQw2xFzH97nI-1"
+                className="underline hover:text-[#db0132]"
+                href="https://harmony-care.ca/"
               >
-                Figma file.
+                live site!
               </a>
             </p>
           </section>
         </div>
 
-        
         <Footer />
       </div>
     </>

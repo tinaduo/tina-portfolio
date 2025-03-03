@@ -14,6 +14,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import TableofContents from "@/components/TableofContents";
+import { ImgComparisonSlider } from "@img-comparison-slider/react";
 
 const Harmony = () => {
   const images = [
@@ -55,7 +56,6 @@ const Harmony = () => {
           year={project.year}
           minutes={project.minutes}
           figmaLink={project.figmaLink}
-          liveLink={project.liveLink}
         />
       ))}
       <section className="mb-8 text-xl">
@@ -137,41 +137,44 @@ const Harmony = () => {
             </section>
             <section className="flex flex-col gap-12 my-44">
               <section className="flex flex-row items-center gap-3.5">
-                <img
-                  width={250}
-                  src="/images/harmony/screenshots/aicall.png" />
+                <img width={250} src="/images/harmony/screenshots/aicall.png" />
                 <div>
                   <h3 className="text-3xl font-medium font-roobert">
                     Harmony AI
                   </h3>
                   <p>
-                    An intelligent assistant that helps caregivers by providing reminders and helping them manage their loved ones' care.
+                    An intelligent assistant that helps caregivers by providing
+                    reminders and helping them manage their loved ones' care.
                   </p>
                 </div>
               </section>
               <section className="flex flex-row-reverse items-center gap-3.5">
                 <img
                   width={250}
-                  src="/images/harmony/screenshots/calendar.png" />
+                  src="/images/harmony/screenshots/calendar.png"
+                />
                 <div>
                   <h3 className="text-3xl font-medium font-roobert">
                     Calendar
                   </h3>
                   <p>
-                    A centralized calendar that helps caregivers keep track of appointments, medication schedules, and other important events.
+                    A centralized calendar that helps caregivers keep track of
+                    appointments, medication schedules, and other important
+                    events.
                   </p>
                 </div>
               </section>
               <section className="flex flex-row items-center gap-3.5">
                 <img
                   width={250}
-                  src="/images/harmony/screenshots/journal.png" />
+                  src="/images/harmony/screenshots/journal.png"
+                />
                 <div>
-                  <h3 className="text-3xl font-medium font-roobert">
-                    Journal
-                  </h3>
+                  <h3 className="text-3xl font-medium font-roobert">Journal</h3>
                   <p>
-                    A journal feature that allows caregivers to record important information, track progress, and share updates with family members.
+                    A journal feature that allows caregivers to record important
+                    information, track progress, and share updates with family
+                    members.
                   </p>
                 </div>
               </section>
@@ -322,20 +325,71 @@ const Harmony = () => {
             <img src="/images/harmony/harmony_styleguide.png" />
           </section>
 
-            <section className="flex flex-col gap-3.5 my-32">
-              <h3 className="text-4xl font-medium font-roobert">
-                Wireframes
-              </h3>
-              <p>
-                Wireframes were designed to ensure a user-friendly experience
-                that simplifies caregiving tasks. The layout prioritizes
-                essential features, such as the calendar and AI assistant, to
-                streamline daily routines and reduce cognitive load.
-              </p>
-              <img src="/images/harmony/lofi-hifi.png" />
+          <section className="flex flex-col gap-3.5 my-32">
+            <h3 className="text-4xl font-medium font-roobert">Wireframes</h3>
+            <p>
+              Wireframes were designed to ensure a user-friendly experience that
+              simplifies caregiving tasks. The layout prioritizes essential
+              features, such as the calendar and AI assistant, to streamline
+              daily routines and reduce cognitive load.
+            </p>
+            <img src="/images/harmony/lofi-hifi.png" />
           </section>
 
-          <section className="mb-8 flex flex-col justify-center items-center">
+          <section className="flex flex-col justify-center gap-3.5">
+            <div className="flex-col justify-start items-center gap-[18px] inline-flex">
+              <h4 className=" text-center text-black text-[32px] font-medium font-roobert">
+                Notable explorations in design
+              </h4>
+              <p className=" text-center text-black text-xl font-normal font-neuemontreal">
+                After conducting usability tests, a few key design changes were
+                made to enhance the user experience.
+              </p>
+            </div>
+            <div className="flex-row items-center gap-6 mt-6 flex">
+              <div className="flex flex-row">
+                <ImgComparisonSlider className="outline-none w-[300px] mr-8">
+                  <figure slot="first" class="before">
+                    <img
+                      width="100%"
+                      src="/images/harmony/harmonycall-lofi.png"
+                    />
+                    <figcaption className="bg-[#FBF8F8] p-4 text-center text-black/75 text-sm w-full font-departure">
+                      before
+                    </figcaption>
+                  </figure>
+                  <figure slot="second" class="after">
+                    <img
+                      slot="second"
+                      src="/images/harmony/harmonycall-hifi.png"
+                    />
+                    <figcaption className="text-[#2e3452] p-4 text-center text-black/75 text-sm w-full font-departure">
+                      after
+                    </figcaption>
+                  </figure>
+                </ImgComparisonSlider>
+                <div className="flex flex-col justify-center w-[455px]">
+                <h6 className=" text-black text-2xl font-medium font-roobert">
+                  Harmony AI
+                </h6>
+                <p className="text-black text-xl font-normal font-neuemontreal">
+                  Replaced the call-based AI interaction with a standard
+                  chat-style conversation interface, which significantly
+                  enhances the user experience by providing a more intuitive and
+                  familiar method of engagement.
+                  <br />
+                  <br />
+                  This interface redesign follows common patterns that users
+                  recognize from popular messaging applications, thereby
+                  reducing the learning curve and making the technology more
+                  accessible to a broader audience.
+                </p>
+              </div>
+            </div>
+            </div>
+          </section>
+
+          <section className="my-32 flex flex-col justify-center items-center">
             <div className="justify-start items-start gap-3.5">
               <h4 className="text-4xl font-medium font-roobert mb-2">
                 Harmony Promotional Materials Designs

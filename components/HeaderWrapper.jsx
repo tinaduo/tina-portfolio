@@ -75,13 +75,13 @@ const HeaderWrapper = ({
             className="text-[#939396] text-base md:text-xl font-normal font-neuemontreal hover:underline">
               Figma↗
           </Link>
-          <Link 
+          {/* <Link 
             href={liveLink || "https://www.tinaduong.ca"} 
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#939396] text-base md:text-xl font-normal font-neuemontreal hover:underline">
               Live↗
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

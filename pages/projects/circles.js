@@ -32,6 +32,7 @@ const Circles = () => {
             endDate={project.endDate}
             year={project.year}
             minutes={project.minutes}
+            figmaLink={project.figmaLink}
           />
         ))}
       </div>
