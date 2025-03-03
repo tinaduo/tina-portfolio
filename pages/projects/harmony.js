@@ -299,6 +299,19 @@ const Harmony = () => {
                 <CarouselPrevious />
                 <CarouselNext />
               </Carousel>
+              <section className="flex flex-col gap-3.5">
+                <h3 className="text-4xl font-medium font-roobert">
+                  Competitive Analysis
+                </h3>
+                <p>
+                  The caregiving app market is evolving to provide more than
+                  just task management, focusing on communication, health
+                  tracking, and community support. Competitors like CircleOf,
+                  CareMobi, and Ianacare each offer unique features, from secure
+                  messaging to resource sharing and privacy-focused tools.
+                </p>
+                <img src="/images/harmony/COMPETITIVE_ANALYSIS.png" />
+              </section>
             </section>
           </section>
 
@@ -369,23 +382,23 @@ const Harmony = () => {
                   </figure>
                 </ImgComparisonSlider>
                 <div className="flex flex-col justify-center w-[455px]">
-                <h6 className=" text-black text-2xl font-medium font-roobert">
-                  Harmony AI
-                </h6>
-                <p className="text-black text-xl font-normal font-neuemontreal">
-                  Replaced the call-based AI interaction with a standard
-                  chat-style conversation interface, which significantly
-                  enhances the user experience by providing a more intuitive and
-                  familiar method of engagement.
-                  <br />
-                  <br />
-                  This interface redesign follows common patterns that users
-                  recognize from popular messaging applications, thereby
-                  reducing the learning curve and making the technology more
-                  accessible to a broader audience.
-                </p>
+                  <h6 className=" text-black text-2xl font-medium font-roobert">
+                    Harmony AI
+                  </h6>
+                  <p className="text-black text-xl font-normal font-neuemontreal">
+                    Replaced the call-based AI interaction with a standard
+                    chat-style conversation interface, which significantly
+                    enhances the user experience by providing a more intuitive
+                    and familiar method of engagement.
+                    <br />
+                    <br />
+                    This interface redesign follows common patterns that users
+                    recognize from popular messaging applications, thereby
+                    reducing the learning curve and making the technology more
+                    accessible to a broader audience.
+                  </p>
+                </div>
               </div>
-            </div>
             </div>
           </section>
 
