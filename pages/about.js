@@ -15,16 +15,6 @@ const About = () => {
       <NavBar />
       <div className="flex flex-row gap-20 justify-start mx-[120px] mt-[100px] mb-28">
         <section>
-          <motion.img
-            src="/images/stickers/maxmonkey.png"
-            alt="max monkey sticker"
-            className="absolute left-[40rem] top-[45rem] w-[150px] z-10 object-cover cursor-grab"
-            whileHover={{ scale: 1.1, rotate: 15 }}
-            whileTap={{ scale: 1.1, rotate: 10 }}
-            drag
-            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-
-          />
           <LivePhoto
             imageUrl="/images/IMG_3620.jpeg"
             videoUrl="/images/IMG_3620.mov"
@@ -74,6 +64,14 @@ const About = () => {
               conversations, I love uncovering what makes people tick and
               translating that into impactful digital solutions.
             </p>
+            <motion.img
+              src="/images/stickers/maxmonkey.png"
+              alt="max monkey sticker"
+              className="w-[150px] z-10 object-cover cursor-grab"
+              whileHover={{ scale: 1.1, rotate: 15 }}
+              whileTap={{ scale: 1.1, rotate: 10 }}
+              drag
+            />
           </div>
 
           {/* <div className="flex-col justify-start items-start gap-4 flex">
