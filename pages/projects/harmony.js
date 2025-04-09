@@ -13,7 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import TableofContents from "@/components/TableofContents";
+// import TableofContents from "@/components/TableofContents";
 import { ImgComparisonSlider } from "@img-comparison-slider/react";
 
 const Harmony = () => {
@@ -38,7 +38,7 @@ const Harmony = () => {
         <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
       </Head>
       <NavBar />
-      <TableofContents className="mix-blend-exclusion" sections={sections} />
+      {/* <TableofContents className="mix-blend-exclusion" sections={sections} /> */}
       <img
         className="w-screen h-[538px] object-cover"
         src="/images/harmony/harmony-hero-img.jpg"

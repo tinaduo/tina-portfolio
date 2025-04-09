@@ -70,6 +70,7 @@ const About = () => {
               className="w-[150px] z-10 object-cover cursor-grab"
               whileHover={{ scale: 1.1, rotate: 15 }}
               whileTap={{ scale: 1.1, rotate: 10 }}
+              
               drag
             />
           </div>
