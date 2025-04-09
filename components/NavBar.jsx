@@ -56,7 +56,7 @@ const NavBar = () => {
       </a>
       <Spacer />
       <a
-        href="https://drive.google.com/file/d/1SYBD-p3pOFEPXoXfBztsl3QD5hqA9oK_/view?usp=sharing"
+        href="https://drive.google.com/file/d/1a3CMR9bBMd7k3DXGARggZgyRNqt247mq/view?usp=sharing"
         className="text-center text-lg sm:text-xl md:text-2xl whitespace-nowrap font-roobert hover:underline"
         target="_blank"
         rel="noopener noreferrer"
